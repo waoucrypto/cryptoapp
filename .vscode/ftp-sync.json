@@ -1,0 +1,27 @@
+{
+    "remotePath": "/cryptoapi/public/",
+    "host": "ftp.cluster031.hosting.ovh.net",
+    "username": "cryptoh",
+    "password": "q845VAnbkSU9",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ".php, .css, .js"
+        ],
+        "path": ""
+    }
+}
