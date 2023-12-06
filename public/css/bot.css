@@ -16,7 +16,7 @@ BOT
 .bot_empty0 {display:flex;width:700px;height:100%;flex-direction:column;}
 .bot_empty1 {display:flex;width:100%;height:100%;justify-content:center;align-items:center;flex-direction:column;}
 .bot_empty1 span {display:flex;width:80px;border:1px solid var(--color-border);border-radius:50%;aspect-ratio:1/1;padding:15px;}
-.bot_empty1 span img {display:flex;width:100%;}
+.bot_empty1 span svg {display:flex;width:100%;fill:var(--color-storm);}
 .bot_empty1 b {display:flex;font-size:22px;font-weight:500;margin:10px 0 0 0;}
 .bot_empty2 {display:flex;width:100%;}
 .bot_empty2 ul {display:flex;width:100%;flex-wrap:wrap;justify-content:space-between;padding:0 10px 0 10px;}
@@ -32,7 +32,7 @@ BOT SIDE
 .bot_side_top {display:flex;height:50px;width:100%;align-items:flex-start;padding:14px 9px 14px 9px;flex-shrink:0;}
 .bot_side_top a {display:flex;width:100%;align-items:center;justify-content:space-between;border-radius:7px;padding:4.5px 10px 4.5px 10px;}
 .bot_side_top a span {display:flex;align-items:center;}
-.bot_side_top a span img {height:26px;}
+.bot_side_top a span svg {height:26px;fill:var(--color-storm);}
 .bot_side_top a span b {margin:0 0 0 10px;font-size:26px;line-height:1;margin-bottom:5px;color:var(--color-storm);font-family:'MuseoModerno';font-weight:700;letter-spacing:-0.4px;}
 .bot_side_new a i {font-size:18px;}
 .bot_side_top a:hover {background:var(--color-bloc2);}
@@ -166,9 +166,6 @@ MODULES
 ------------------------------------------------------------------------------------------------------------------------------
 */
 
-.dash_list {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;padding-bottom:5px;}
-.dash_profit {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:50%;position:relative;}
-.settings_bloc {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;}
 
 
 .dash_list ul li a {padding:10px 5px 10px 5px;}
@@ -300,18 +297,19 @@ EMPTY
 
 .bot .dash_buysell ul li a {padding-top:15px;padding-bottom:15px;}
 
-.bot .dash_list {border:none;}
-.bot .dash_list ul {padding:0;}
-.bot .dash_list ul li {border:none;}
-.bot .dash_list ul li a {padding:5px 0 5px 0;}
-.bot .dash_list strong {display:none;}
+
 
 .bot .search_bloc .dash_search {display:none;}
 
-	
-	
+
+
 body {background:var(--color-bloc);}
-	
+
+.dash_list {width:100%;}
+.dash_profit {width:100%;}
+.settings_bloc {width:100%;}
+
+
 }
 
 

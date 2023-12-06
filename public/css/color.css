@@ -1,10 +1,20 @@
 
+.green {color:#3fd2a4;}
+.red {color:#e73b3b;}
+.green2 {background:#3fd2a4;}
+.red2 {background:#e73b3b;}
+
+.light .green {color:#459782;}
+.light .red {color:#e73b3b;}
+.light .green2 {background:#459782;}
+.light .red2 {background:#e73b3b;}
+
 :root {
 
 --color-storm:#ff385c;
 --color-purple:#7a4add;
 --color-yellow:#c5a764;
---color-green:#459782;
+--color-green:#3fd2a4;
 --color-red:#e73b3b;
 --color-blue:#3861f6;
 --color-pink:#ff385c;

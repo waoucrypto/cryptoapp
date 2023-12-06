@@ -21,8 +21,3 @@ img {object-fit:cover;object-position:center center;}
 form {padding:0;margin:0;}
 input[type=text], input[type=number], textarea, input[type=submit] {background:none;border:none;padding:0;margin:0;font-family:'Poppins';font-size:15px;font-weight:500;outline:none;width:100%;appearance:none;}
 button {background:none;border:none;padding:0;margin:0;appearance:none;}
-.green {color:#459782;}
-.red {color:#e73b3b;}
-.green2 {background:#459782;}
-.red2 {background:#e73b3b;}
-
