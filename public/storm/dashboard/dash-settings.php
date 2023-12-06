@@ -1,9 +1,5 @@
 
-<!--
-SETTINGS
--->
-<div class="settings">
-<div class="settings_background" onClick="settings_close()"></div>
+
 
 <meta charset="utf-8">
 
@@ -503,7 +499,6 @@ SAFETY
 </div>
 </div>
 
-</div>
 </div>
 
 <script>

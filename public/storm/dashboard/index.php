@@ -410,7 +410,15 @@ DASH
 <div class="dash_right_bottom"><?php include 'dash-performance.php' ;?></div>
 
 <?php include 'dash-share.php' ;?>
+
+<!--
+SETTINGS
+-->
+<div class="settings">
+<div class="settings_background" onClick="settings_close()"></div>	
 <?php include 'dash-settings.php' ;?>
+</div>
+
 
 </div><!-- END DASH -->
 

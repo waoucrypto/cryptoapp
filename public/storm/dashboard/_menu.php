@@ -43,7 +43,11 @@ HEADER LEFT
 <i class="fa-solid fa-magnifying-glass"></i>
 <input type="text" placeholder="<?= $latrad['Search pair by symbol, name, contract or token'][$_SESSION['langue']] ?>" onClick="search_open()">
 </form>
+<div class="search">
+<div class="search_bloc">
 <?php include 'dash-search.php' ;?>
+</div>
+</div>
 </div>
 
 </div>

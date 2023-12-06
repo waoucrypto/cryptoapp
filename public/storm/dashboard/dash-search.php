@@ -1,9 +1,7 @@
 
 <!--
-SEARCH
+DASH SEARCH
 -->
-<div class="search">
-<div class="search_bloc">
 <div class="dash_list dash_search">
 <ul>
 <li>
@@ -11,7 +9,7 @@ SEARCH
 <span><?= $latrad["Name"][$_SESSION['langue']] ?></span>
 <span><?= $latrad["1H"][$_SESSION['langue']] ?></span>
 <span><?= $latrad["Trend"][$_SESSION['langue']] ?></span>
-<span><?= $latrad["Snipe"][$_SESSION['langue']] ?></span>
+<span></span>
 </a>
 </li>
 <?php for ($i = 1; $i <= 10; $i++): ?>
@@ -20,13 +18,11 @@ SEARCH
 <span><img src="/images/pepe.jpg"><div><b>Pepe</b><em>PEPE / ETH</em></div></span>
 <span class="green">+20%</span>
 <span>#<?php echo $i; ?></span>
-<span><?= $latrad["Buy"][$_SESSION['langue']] ?></span>
+<span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
 </a>
 </li>
 <?php endfor; ?>
 </ul>
-</div>
-</div>
 </div>
 
 <script>
