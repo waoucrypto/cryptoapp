@@ -64,9 +64,10 @@ HEADER RIGHT
 <em>0X898...4521 <i class="fa-solid fa-angle-down"></i></em>
 </div>
 <div class="dash_header_nav">
-<a href="" target="_blank" class="dash_header_top_right_circle"><i class="fa-solid fa-book-open"></i></a>
+<a href="" target="_blank" class="dash_header_top_right_circle"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="" target="_blank" class="dash_header_top_right_circle"><i class="fa-solid fa-book"></i></a>
 <a href="#" id="toggleTheme" class="dash_header_top_right_circle"><i class="fa-solid fa-circle-half-stroke"></i></a>
-<a href="" target="_blank" class=""><i class="fa-brands fa-x-twitter"></i></a>
+<a href="#" onClick="settings_open()" class="dash_header_top_right_circle"><i class="fa-solid fa-gear"></i></a>
 </div>
 </div>
 
