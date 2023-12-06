@@ -20,5 +20,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: /
-        remote-dir: /cryptoapi/
-        git-ftp-args: --insecure
+        server-dir: /cryptoapi/
