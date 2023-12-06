@@ -53,13 +53,23 @@ HEADER RIGHT
 -->
 <div class="dash_header_top_right">
 <div class="dash_header_nav">
-<span><i class="fa-solid fa-gas-pump"></i> <?= $datas['gasPriceInGwei']  ?> </span>
-<a href="" target="_blank" class="dash_header_top_right_circle"><i class="fa-solid fa-book-open"></i></a>
-<a href="#" id="toggleTheme" class="dash_header_top_right_circle"><i class="fa-solid fa-circle-half-stroke"></i></a>
-<a href="" target="_blank" class=""><i class="fa-brands fa-x-twitter"></i></a>
+<div class="dash_header_nav">
+<span><i class="fa-solid fa-gas-pump"></i> <?= $datas['gasPriceInGwei']  ?></span>
 <a href="" target="_blank" class="">Buy us a coffee <i class="fa-solid fa-mug-hot"></i></a>
+</div>
+<div class="dash_header_nav">
 <em id="lacrypto"> <i class="fa-solid fa-angle-down"></i></em>
 </div>
+<div class="dash_header_nav">
+<a href="" target="_blank" class="dash_header_top_right_circle"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="" target="_blank" class="dash_header_top_right_circle"><i class="fa-solid fa-book"></i></a>
+<a href="#" id="toggleTheme" class="dash_header_top_right_circle"><i class="fa-solid fa-circle-half-stroke"></i></a>
+<a href="#" onClick="settings_open()" class="dash_header_top_right_circle"><i class="fa-solid fa-gear"></i></a>
+</div>
+</div>
+
+
+
 </div>
 
 </div>
