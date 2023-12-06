@@ -8,9 +8,6 @@ OVERVIEW
 <div class="tradingview_title">
 <em>
 <i class="fa-solid fa-layer-group"></i>
-<span class="material-symbols-outlined">
-candlestick_chart
-</span>
 </em>
 <div>
 <span><?= $latrad["Overview"][$_SESSION['langue']] ?></span>

@@ -99,6 +99,7 @@ $(document).ready(function(){
               </span>
                 <span class="${item.attributes.price_change_percentage.h24 > 0 ? 'green': 'red'}">${item.attributes.price_change_percentage.h24}%</span>
                 <span>${calculateDifferenceInMinutes(item.attributes.pool_created_at)} MIN</span>
+                <span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
             </a>
           </li>
         `;
@@ -132,6 +133,7 @@ $(document).ready(function(){
               </span>
                 <span class="${item.attributes.price_change_percentage.h24 > 0 ? 'green': 'red'}">${item.attributes.price_change_percentage.h24}%</span>
                 <span>${calculateDifferenceInMinutes(item.attributes.pool_created_at)} MIN</span>
+                <span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
             </a>
           </li>
         `;

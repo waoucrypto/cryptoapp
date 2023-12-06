@@ -9,9 +9,6 @@ BUY / SELL
 <div class="tradingview_title">
 <em>
 <i class="fa-solid fa-bullseye"></i>
-<span class="material-symbols-outlined">
-target
-</span>
 </em>
 <div>
 <span><?= $latrad["Trading"][$_SESSION['langue']] ?></span>

@@ -8,9 +8,6 @@ TRENDING
 <div class="tradingview_title">
 <em>
 <i class="fa-solid fa-fire"></i>
-<span class="material-symbols-outlined">
-local_fire_department
-</span>
 </em>
 <div>
 <span><?= $latrad["Trending"][$_SESSION['langue']] ?></span>
@@ -26,7 +23,7 @@ local_fire_department
 <span><?= $latrad["Name"][$_SESSION['langue']] ?></span>
 <span><?= $latrad["1H"][$_SESSION['langue']] ?></span>
 <span><?= $latrad["Trend"][$_SESSION['langue']] ?></span>
-<span><?= $latrad["Snipe"][$_SESSION['langue']] ?></span>
+<span></span>
 </a>
 </li>
 

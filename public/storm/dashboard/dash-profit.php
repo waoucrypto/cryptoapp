@@ -11,17 +11,14 @@ PROFIT
 <div class="tradingview_title">
 <em>
 <i class="fa-solid fa-circle-notch"></i>
-<span class="material-symbols-outlined">
-data_usage
-</span>
 </em>
 <div>
-<span>Profit</span>
-<span>TOKEN</span>
+<span><?= $latrad["Profit"][$_SESSION['langue']] ?></span>
+<span><?= $latrad["Storm - report"][$_SESSION['langue']] ?></span>
 </div>
 </div>
 <div class="dash_share">
-<button id="generateImage">Share <i class="fa-brands fa-x-twitter"></i></button>
+<button id="generateImage"><?= $latrad["Share"][$_SESSION['langue']] ?> <i class="fa-brands fa-x-twitter"></i></button>
 </div>
 </strong>
 
@@ -30,7 +27,7 @@ data_usage
 <div data-donutty data-value="75" dir="rtl"  data-anchor="top" data-color="#3fd2a4"></div>
 <span class="dash_profit_dyna2">
 <span>300%</span>
-<span>PROFIT</span>
+<span><?= $latrad["Profit"][$_SESSION['langue']] ?></span>
 </span>
 <span class="dash_profit_dyna3" style="color:#3fd2a4">$12.5k</span>
 </div>

@@ -8,9 +8,6 @@ PORTFOLIO
 <div class="tradingview_title">
 <em>
 <i class="fa-solid fa-star"></i>
-<span class="material-symbols-outlined">
-star
-</span>
 </em>
 <div>
 <span><?= $latrad["Portfolio"][$_SESSION['langue']] ?></span>
@@ -26,7 +23,7 @@ star
 <span><?= $latrad["Name"][$_SESSION['langue']] ?></span>
 <span><?= $latrad["1H"][$_SESSION['langue']] ?></span>
 <span><?= $latrad["Profit"][$_SESSION['langue']] ?></span>
-<span><?= $latrad["Snipe"][$_SESSION['langue']] ?></span>
+<span></span>
 </a>
 </li>
 
@@ -36,7 +33,7 @@ star
 <span><img src="/images/otsea.png"><div><b>Otsea</b><em>OTSEA / ETH</em></div></span>
 <span class="green">+20%</span>
 <span>2 ETH</span>
-<span>Buy</span>
+<span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
 </a>
 </li>
 <?php endfor; ?>

@@ -8,9 +8,6 @@ PERFORMANCE
 <div class="tradingview_title">
 <em>
 <i class="fa-solid fa-chart-pie"></i>
-<span class="material-symbols-outlined">
-account_balance
-</span>
 </em>	
 <div>
 <span><?= $latrad["Performance"][$_SESSION['langue']] ?></span>
