@@ -4,7 +4,7 @@
     try {
         // connect to OVHcloud Public Cloud Databases for MongoDB (cluster in version 4.4, MongoDB PHP Extension in 1.8.1)
         $m = new MongoDB\Driver\Manager('mongodb+srv://notrecomcrypto:0UrnJAOGwRmwt2GG@cluster0.padc8yf.mongodb.net/?retryWrites=true&w=majority');
-        echo "Connection to database successfully";
+        echo "Connection to database successfully klm";
         // display the content of the driver, for diagnosis purpose
         var_dump($m);
     }
