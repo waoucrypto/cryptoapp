@@ -11,6 +11,11 @@ if (!isset($_SESSION['theme'])) {
     $_SESSION['theme'] = 'dark';
 }
 $themeClass = $_SESSION['theme'];
+
+if (!isset($_SESSION['langue'])) {
+  $_SESSION['langue'] = 'en';
+}
+
 ?>
 
 
