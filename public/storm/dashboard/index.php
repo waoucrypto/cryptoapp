@@ -23,7 +23,10 @@ if (!isset($_SESSION['langue'])) {
 	 if($_GET['address']){
 				  $address = $_GET['address'];
     $parts = explode('_', $address);
-	 }
+	 }else{
+    $address = 'eth_x3';
+    $parts = explode('_', $address);
+   }
 		 
 	?>	 
 
@@ -82,39 +85,46 @@ var counts = {
 	
 $(document).ready(function(){
 	
-	
-	
-	
-  $.ajax({
-    url: 'https://api.geckoterminal.com/api/v2/networks/eth/new_pools?page=1', // Remplacez par l'URL réelle de votre API
-      type: 'GET',
-    dataType: 'json',
-    success: function(response) {
-      var items = response.data;
-      $.each(items, function(index, item) {
-        var listItem = `
-          <li>
-            <a href="?address=${item.relationships.base_token.data.id}">
-              <span>
-              
-                <div>
-                  <b>${item.attributes.name}</b> 
-           
-                </div>
-              </span>
-                <span class="${item.attributes.price_change_percentage.h24 > 0 ? 'green': 'red'}">${item.attributes.price_change_percentage.h24}%</span>
-                <span>${calculateDifferenceInMinutes(item.attributes.pool_created_at)} MIN</span>
-                <span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
-            </a>
-          </li>
-        `;
-        $('#liste-elements').append(listItem);
-      });
-    },
-    error: function() {
-      $('#liste-elements').append('<li>Erreur de chargement des données.</li>');
+	$.ajax({
+  url: 'https://api.geckoterminal.com/api/v2/networks/eth/new_pools?page=1',
+  type: 'GET',
+  dataType: 'json',
+  success: function(response) {
+    var items = response.data;
+
+    // Vérifie si le paramètre 'address' est présent dans l'URL
+    var urlParams = new URLSearchParams(window.location.search);
+    if (!urlParams.has('address') && items.length > 0) {
+      // Redirige vers la nouvelle URL avec l'ID de l'adresse du premier élément
+      window.location.href = '/storm/dashboard?address=' + items[0].relationships.base_token.data.id;
+      return; // Arrête l'exécution ultérieure du succès de la requête
     }
-  });
+
+    $.each(items, function(index, item) {
+      var listItem = `
+        <li>
+          <a href="?address=${item.relationships.base_token.data.id}">
+            <span>
+              <div>
+                <b>${item.attributes.name}</b> 
+              </div>
+            </span>
+            <span class="${item.attributes.price_change_percentage.h24 > 0 ? 'green': 'red'}">${item.attributes.price_change_percentage.h24}%</span>
+            <span>${calculateDifferenceInMinutes(item.attributes.pool_created_at)} MIN</span>
+            <span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
+          </a>
+        </li>
+      `;
+      $('#liste-elements').append(listItem);
+    });
+  },
+  error: function() {
+    console.log('Erreur lors de la requête AJAX');
+    $('#liste-elements').append('<li>Erreur de chargement des données.</li>');
+  }
+});
+
+
 	
 	
   $.ajax({

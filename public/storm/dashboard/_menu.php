@@ -58,7 +58,7 @@ HEADER RIGHT
 <div class="dash_header_top_right">
 <div class="dash_header_nav">
 <div class="dash_header_nav">
-<span><i class="fa-solid fa-gas-pump"></i> <?= $datas['gasPriceInGwei']  ?></span>
+<span><i class="fa-solid fa-gas-pump"></i> GasPrice</span>
 <a href="" target="_blank" class="">Buy us a coffee <i class="fa-solid fa-mug-hot"></i></a>
 </div>
 <div class="dash_header_nav">

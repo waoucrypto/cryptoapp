@@ -74,7 +74,7 @@ SIGN IN
         // ...
   // Envoyez une requête AJAX avec l'adresse et la signature au backend pour vérification
        $.ajax({
-          url: '/api/authenticate', // Remplacez par votre URL d'API backend
+          url: '/api/authenticate.php', // Remplacez par votre URL d'API backend
           type: 'POST',
           contentType: 'application/json',
           data: JSON.stringify({
@@ -88,7 +88,7 @@ SIGN IN
             // Connexion réussie, gérer ici la réponse du serveur
             console.log('Utilisateur authentifié avec succès:', response);
 			  
-			  window.location.href = '/dashboard';
+			  window.location.href = '/storm/dashboard';
 
 			  
           },

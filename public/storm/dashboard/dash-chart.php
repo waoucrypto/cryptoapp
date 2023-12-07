@@ -58,6 +58,7 @@ CHART
       new TradingView.widget({
         "autosize": true,
         "symbol": "UNISWAP3ETH:PEPEUSDT",
+        //  "symbol": "UNISWAP2ETH:PEPEWETH",
         "interval": "D",
         "timezone": "Etc/UTC",
         "theme": theme,
