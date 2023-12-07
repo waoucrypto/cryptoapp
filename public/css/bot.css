@@ -326,7 +326,7 @@ body {background:var(--color-bloc);}
 .bot_center {position:relative;}
 .bot_center2 {display:relative;}
 .bot_empty {position:relative;}
-.bot_mobile {position:relative;}
+.bot_mobile {position:fixed;}
 
 
 }
