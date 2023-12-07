@@ -3,7 +3,7 @@
 BOT MESSAGE
 -->
 <div class="bot_message">
-Your wallet.<br><br>
+Your wallet.
 </div>
 
 <?php include '../dashboard/dash-settings.php' ;?>

@@ -3,7 +3,7 @@
 BOT MESSAGE
 -->
 <div class="bot_message">
-Your profit.<br><br>
+Your profit.
 </div>
 
 <?php include '../dashboard/dash-profit.php' ;?>

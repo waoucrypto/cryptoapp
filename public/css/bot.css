@@ -108,7 +108,7 @@ BOT STORM
 BOT MESSAGE
 */
 .bot .bot_message {display:block;font-size:15px;width:85%;}
-.bot .bot_message a {text-decoration:underline;color:var(--color-storm);font-style:italic;}
+.bot .bot_message a {text-decoration:underline;font-style:italic;}
 .bot .bot_message b {color:var(--color-storm);}
 
 /*
@@ -166,6 +166,9 @@ MODULES
 ------------------------------------------------------------------------------------------------------------------------------
 */
 
+.dash_list {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;padding-bottom:5px;margin-top:15px;}
+.dash_profit {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:50%;position:relative;margin-top:15px;}
+.settings_bloc {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;margin-top:15px;}
 
 
 .dash_list ul li a {padding:10px 5px 10px 5px;}
