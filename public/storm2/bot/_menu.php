@@ -62,7 +62,7 @@ BOT SIDE
 <li><a href="" target="_blank"><i class="fa-brands fa-telegram"></i>Telegram Bot</a></li>
 <li><a href="/storm2/bot/"><i class="fa-solid fa-robot"></i> Web Bot</a></li>
 <li><a href="#" id="toggleTheme" class="bot_side_circle"><i class="fa-solid fa-circle-half-stroke"></i>Dark/Light</a></li>
-<li><a href="" target="_blank"><i class="fa-solid fa-book-open"></i> Help</a></li>
+<li><a href="" target="_blank"><i class="fa-solid fa-book"></i> Help</a></li>
 <li><a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i> Follow us</a></li>
 <li><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></li>
 </ul>
