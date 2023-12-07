@@ -242,8 +242,8 @@ WIREFRAME
 .dash_bloc_right 
 {height:auto;}
 .bot_left {display:none;z-index:100;position:fixed;width:75%;left:-75%;}
-.bot_bottom {left:0;height:50px;padding-top:0;}
-.bot_center {left:0;bottom:50px;}
+.bot_bottom {left:0;height:55px;padding-top:0;}
+.bot_center {left:0;bottom:55px;}
 .bot_center2 {width:100%;padding-left:20px;padding-right:20px;}
 
 
