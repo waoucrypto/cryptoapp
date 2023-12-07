@@ -15,7 +15,7 @@ OVERVIEW
 </div>
 </div>
 <div class="dash_score">
-<span><b id="score"></b></span>
+<span><b id="score"></b><div><i></i><i></i><i></i><i></i></div></span>
 </div>
 </strong>
 
