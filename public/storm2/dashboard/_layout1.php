@@ -38,7 +38,7 @@
 		<script src="/js/jquery.min.js"></script>
 </head>
 
-<body class="<?php echo $themeClass; ?>" >
+<body class="<?php echo $themeClass; ?>">
 
 <?php
 session_start();
@@ -50,3 +50,21 @@ if (!isset($_SESSION['theme'])) {
 }
 $themeClass = $_SESSION['theme'];
 ?>
+
+<script>	
+$(document).ready(function(){
+    $('#toggleTheme').click(function(){
+        $('body').toggleClass('light');
+        var theme = $('body').hasClass('light') ? 'light' : 'dark';
+        $.ajax({
+            url: '/storm2/toggle_theme.php',
+            type: 'POST',
+            data: {theme: theme},
+            success: function(response){
+                console.log("Thème changé avec succès !");
+            }
+        });
+        reloadTradingViewWidget(theme);
+    });
+});
+</script>

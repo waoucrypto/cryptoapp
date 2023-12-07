@@ -93,20 +93,4 @@ $(document).ready(function() {
         event.stopPropagation(); // Empêche l'événement de se propager à document
     });
 });
-				   
-$(document).ready(function(){
-    $('#toggleTheme').click(function(){
-        $('body').toggleClass('light');
-        var theme = $('body').hasClass('light') ? 'light' : 'dark';
-        $.ajax({
-            url: '../toggle_theme.php',
-            type: 'POST',
-            data: {theme: theme},
-            success: function(response){
-                console.log("Thème changé avec succès !");
-            }
-        });
-        reloadTradingViewWidget(theme);
-    });
-});
 </script>

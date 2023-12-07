@@ -3,15 +3,10 @@
 DASHBOARD ------------------------------------------------------------------------------------------------------------------------------
 */
 
-body {background:var(--color-bloc);color:var(--color-text);}
-body.light {background:var(--color-bloc);color:var(--color-text);}
-
 /*
 DASH
 */
-.dash {position:fixed;top:0;left:0;right:0;bottom:0;background:var(--color-bloc);color:var(--color-text);}
-.dash.light {background:var(--color-bloc);color:var(--color-text);}
-
+.dash {position:fixed;top:0;left:0;right:0;bottom:0;}
 
 /*
 DASH HEADER

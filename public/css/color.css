@@ -103,3 +103,7 @@
 --color-toolbar:none;
 
 }
+
+
+body {background:var(--color-bloc);color:var(--color-text);}
+body.light {background:var(--color-bloc);color:var(--color-text);}
