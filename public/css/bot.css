@@ -311,6 +311,7 @@ body {background:var(--color-bloc);}
 .dash_list {width:100%;}
 .dash_profit {width:100%;}
 .settings_bloc {width:100%;}
+.bot .bot_message {width:100%;}
 
 
 }
