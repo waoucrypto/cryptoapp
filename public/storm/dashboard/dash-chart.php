@@ -57,8 +57,8 @@ CHART
       $("#tradingview_40607").html('');
       new TradingView.widget({
         "autosize": true,
-        "symbol": "UNISWAP3ETH:PEPEUSDT",
-        //  "symbol": "UNISWAP2ETH:PEPEWETH",
+        "symbol": "COWETH",
+        
         "interval": "D",
         "timezone": "Etc/UTC",
         "theme": theme,

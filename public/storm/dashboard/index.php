@@ -214,7 +214,25 @@ $(document).ready(function(){
     }
   });
 			
-			
+  function reloadTradingViewWidget(theme, symbol) {
+    var backgroundColor = theme === 'light' ? 'rgba(250, 250, 250, 1)' : 'rgba(0, 0, 0, 1)';
+    $("#tradingview_40607").html('');
+    new TradingView.widget({
+      "autosize": true,
+      "symbol": symbol,
+      "interval": "D",
+      "timezone": "Etc/UTC",
+      "theme": theme,
+      "style": "1",
+      "locale": "fr",
+      "enable_publishing": false,
+      "hide_legend": true,
+      "hide_side_toolbar": false,
+      "backgroundColor": backgroundColor,
+      "toolbar_bg": backgroundColor,
+      "container_id": "tradingview_40607",
+    });
+  }
 
   $.ajax({
     url: 'https://api.geckoterminal.com/api/v2/networks/<?= $parts[0] ?>/tokens/<?= $parts[1] ?>/info', // Remplacez par l'URL réelle de votre API
@@ -229,8 +247,9 @@ $(document).ready(function(){
 	 $('#cryptosymbolpair').append(items.attributes.symbol+' / <?= $parts[0] ?>');	
 			 $('#score').append(Math.round(items.attributes.gt_score)+"<em>/100</em><u><?= $latrad["Score"][$_SESSION['langue']] ?></u>");	
 			 $('#limage').attr("src", items.attributes.image_url);	
+       var symbol = items.attributes.symbol;
+       reloadTradingViewWidget("<?php echo $themeClass; ?>", symbol);
 
-		
 		
 		if(items.attributes.websites[0]){
 		      $('#lienSite').attr('href', items.attributes.websites[0] );
