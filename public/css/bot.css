@@ -323,7 +323,7 @@ body {background:var(--color-bloc);}
 .bot {position:relative;}
 .bot_left {position:fixed;}
 .bot_bottom {position:fixed;}
-.bot_center {position:relative;}
+.bot_center {position:fixed;}
 .bot_center2 {display:relative;}
 .bot_empty {position:fixed;}
 .bot_mobile {position:fixed;}
