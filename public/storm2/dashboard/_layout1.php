@@ -48,8 +48,8 @@ if (!isset($_SESSION['theme'])) {
 }
 $themeClass = $_SESSION['theme'];
 ?>
-<body class="<?php echo $themeClass; ?>">
 
+<body class="<?php echo $themeClass; ?>">
 
 <script>	
 $(document).ready(function(){

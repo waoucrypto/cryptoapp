@@ -39,8 +39,6 @@
 		<script src="/js/jquery.min.js"></script>
 </head>
 
-<body class="<?php echo $themeClass; ?>">
-
 <?php
 session_start();
 if (isset($_COOKIE['theme'])) {
@@ -51,6 +49,8 @@ if (!isset($_SESSION['theme'])) {
 }
 $themeClass = $_SESSION['theme'];
 ?>
+
+<body class="<?php echo $themeClass; ?>">
 
 <script>	
 $(document).ready(function(){
