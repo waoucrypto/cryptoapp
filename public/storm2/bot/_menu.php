@@ -96,8 +96,8 @@ $(document).ready(function() {
 				   
 $(document).ready(function(){
     $('#toggleTheme').click(function(){
-        $('div.dash').toggleClass('light');
-        var theme = $('div.dash').hasClass('light') ? 'light' : 'dark';
+        $('body').toggleClass('light');
+        var theme = $('body').hasClass('light') ? 'light' : 'dark';
         $.ajax({
             url: '../toggle_theme.php',
             type: 'POST',

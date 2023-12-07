@@ -38,4 +38,15 @@
 		<script src="/js/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="<?php echo $themeClass; ?>" >
+
+<?php
+session_start();
+if (isset($_COOKIE['theme'])) {
+    $_SESSION['theme'] = $_COOKIE['theme'];
+}
+if (!isset($_SESSION['theme'])) {
+    $_SESSION['theme'] = 'dark';
+}
+$themeClass = $_SESSION['theme'];
+?>

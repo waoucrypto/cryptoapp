@@ -1,20 +1,9 @@
 <?php include '_layout1.php' ;?>
 
-<?php
-session_start();
-if (isset($_COOKIE['theme'])) {
-    $_SESSION['theme'] = $_COOKIE['theme'];
-}
-if (!isset($_SESSION['theme'])) {
-    $_SESSION['theme'] = 'dark';
-}
-$themeClass = $_SESSION['theme'];
-?>
-
 <!--
 DASH
 -->
-<div class="dash <?php echo $themeClass; ?>">
+<div class="dash">
 
 <?php $menu=''; include '_menu.php' ;?>
 
