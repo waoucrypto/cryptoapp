@@ -11,7 +11,7 @@ BOT
 .bot {position:relative;top:0;left:0;right:0;bottom:0;background:var(--color-bot-right);color:var(--color-text);}
 .bot_left {display:flex;width:260px;position:fixed;top:0;left:0;bottom:0;z-index:10;flex-direction:column;background:var(--color-bot-side);border-right:1px solid var(--color-border);}
 .bot_bottom {position:fixed;left:260px;right:0;bottom:0;height:100px;z-index:10;background:var(--color-bot-right);z-index:10;display:flex;justify-content:center;align-items:flex-start;}
-.bot_center {position:relative;display:flex;justify-content:center;align-items:flex-start;padding-right:0;background:red;width:100%;padding:0 0 100px 260px;}
+.bot_center {position:relative;display:flex;justify-content:center;align-items:flex-start;padding-right:0;width:100%;padding:0 0 100px 260px;}
 .bot_center2 {display:flex;width:700px;flex-direction:column;padding:50px 0 0 0;}
 .bot_empty {position:fixed;left:260px;right:0;bottom:100px;top:0;display:flex;justify-content:center;align-items:flex-start;z-index:5;}
 .bot_empty0 {display:flex;width:700px;height:100%;flex-direction:column;}
@@ -169,7 +169,7 @@ MODULES
 
 .dash_list {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;padding-bottom:5px;margin-top:15px;}
 .dash_profit {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:50%;position:relative;margin-top:15px;}
-.settings_bloc {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;margin-top:15px;}
+.settings_bloc {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;margin-top:15px;z-index:0;}
 .dash_performance {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:50%;position:relative;margin-top:15px;}
 
 
@@ -242,8 +242,8 @@ WIREFRAME
 .dash_bloc_right 
 {height:auto;}
 .bot_left {display:none;z-index:100;position:fixed;width:75%;left:-75%;}
-.bot_bottom {left:0;height:65px;padding-top:0;}
-.bot_center {left:0;bottom:65px;}
+.bot_bottom {left:0;height:50px;padding-top:0;}
+.bot_center {left:0;bottom:50px;}
 .bot_center2 {width:100%;padding-left:20px;padding-right:20px;}
 
 
@@ -324,7 +324,7 @@ body {background:var(--color-bloc);}
 .bot {position:relative;}
 .bot_left {position:fixed;}
 .bot_bottom {position:fixed;}
-.bot_center {position:relative;}
+.bot_center {position:relative;padding:70px 0 0 0;}
 .bot_empty {position:fixed;}
 .bot_mobile {position:fixed;}
 

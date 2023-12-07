@@ -259,39 +259,63 @@ $(document).ready(function() {
     }
 
     function scrollToNewElement(newElement) {
-        setTimeout(function() {
-            var offsetTop = newElement.offset().top - $('.bot_center').offset().top;
-            var scrollAmount = $('.bot_center').scrollTop() + offsetTop - 100;
-            $('.bot_center').animate({ scrollTop: scrollAmount }, 400);
-        }, 100);
-    }
-	
-	function anchorAfterLoading(newElement) {
-		var offsetTop = newElement.offset().top - $('.bot_center').offset().top;
-		var scrollAmount = $('.bot_center').scrollTop() + offsetTop - 150;
-		$('.bot_center').animate({ scrollTop: scrollAmount }, 400);
-	}
+    // Calcule la position de l'élément par rapport au haut du document
+    var elementPosition = newElement.offset().top;
 
-	function loadContentWithLoader(newStorm, loadFile, callback, focusSelector) {
-		newStorm.find('.bot_storm_message').html('<span class="loader1"><span class="loader2"></span></span>');
-		setTimeout(function() {
-			newStorm.find('.bot_storm_message').load(loadFile, function() {
-				anchorAfterLoading(newStorm);
-				if (loadFile === 'bot-buy.php') {
-					setTimeout(function() {
-						reloadTradingViewWidget("<?php echo $themeClass; ?>");
-					}, 100);
-				}
-				if (typeof callback === 'function') {
-					callback();
-				}
-				// Mettre le focus si focusSelector est défini
-				if (focusSelector) {
-					$(focusSelector).focus();
-				}
-			});
-		}, 1000);
-	}
+    // Ajuste la position pour remonter de 100 pixels au-dessus de l'élément
+    var adjustedPosition = elementPosition - 100;
+
+    // Effectue le défilement jusqu'à la position ajustée
+    $('html, body').animate({ scrollTop: adjustedPosition }, 400);
+}
+
+
+
+
+	
+function loadContentWithLoader(newStorm, loadFile, callback, focusSelector) {
+    // Affichage du loader
+    showLoader(newStorm);
+
+    // Chargement du contenu
+    newStorm.find('.bot_storm_message').load(loadFile, function() {
+        // Retirer le loader une fois que le contenu est chargé
+        hideLoader(newStorm);
+
+        // Effectuer le défilement après un bref délai pour assurer le rendu complet du contenu
+        setTimeout(function() {
+            anchorAfterLoading(newStorm);
+
+            if (typeof callback === 'function') {
+                callback();
+            }
+
+            // Mettre le focus si focusSelector est défini
+            if (focusSelector) {
+                $(focusSelector).focus();
+            }
+        }, 500); // Ajustez ce délai si nécessaire
+    });
+}
+
+function showLoader(element) {
+    element.find('.bot_storm_message').html('<span class="loader1"><span class="loader2"></span></span>');
+}
+
+function hideLoader(element) {
+    element.find('.bot_storm_message').find('.loader1').remove();
+}
+
+function anchorAfterLoading(newElement) {
+    var offsetTop = newElement.offset().top - $('.bot_center').offset().top;
+    var scrollAmount = $('.bot_center').scrollTop() + offsetTop - 100;
+    $('.bot_center').animate({ scrollTop: scrollAmount }, 400);
+}
+
+
+
+
+
 
 	
 });
