@@ -233,7 +233,8 @@ WIREFRAME
 .dash_left_top, 
 .dash_left_bottom, 
 .dash_right_top, 
-.dash_right_bottom 
+.dash_right_bottom, 
+.bot 
 {position:relative;top:auto;left:auto;right:auto;bottom:auto;height:auto;width:100%;padding:0;margin:0;}
 .dash_bloc_left, 
 .dash_bloc_center, 
