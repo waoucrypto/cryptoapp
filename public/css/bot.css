@@ -169,10 +169,12 @@ MODULES
 .dash_list {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;padding-bottom:5px;margin-top:15px;}
 .dash_profit {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:50%;position:relative;margin-top:15px;}
 .settings_bloc {border-radius:10px;border:1px solid var(--color-border);width:85%;position:relative;margin-top:15px;}
+.dash_performance {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:50%;position:relative;margin-top:15px;}
 
 
 .dash_list ul li a {padding:10px 5px 10px 5px;}
 .dash_profit_dyna {padding:20px 0 20px 0;}
+.dash_performance ul {height:300px;}
 
 
 
@@ -312,6 +314,7 @@ body {background:var(--color-bloc);}
 .dash_profit {width:100%;}
 .settings_bloc {width:100%;}
 .bot .bot_message {width:100%;}
+.dash_performance {width:100%;}
 
 
 }
