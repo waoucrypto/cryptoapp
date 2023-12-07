@@ -14,8 +14,20 @@ OVERVIEW
 <span>KEY FIGURES</span>
 </div>
 </div>
+
+
+
+
+
 <div class="dash_score">
-<span><b>75<em>/100</em><u>Score</u></b><div><i></i><i></i><i></i><i></i></div></span>
+<span><quote></quote><b>75<em>/100</em><u>Score</u></b><div><i></i><i></i><i></i><i></i></div></span>
+
+
+
+
+
+
+
 </div>
 </strong>
 

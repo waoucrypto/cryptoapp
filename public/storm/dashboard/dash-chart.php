@@ -78,4 +78,7 @@ CHART
 </div>
 <!-- TradingView Widget END -->
 
+<div class="dash_chart_toolbar_top"></div>
+<div class="dash_chart_toolbar_left"></div>
+
 </div>
