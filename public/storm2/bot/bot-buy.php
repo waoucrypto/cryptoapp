@@ -1,14 +1,15 @@
 <meta charset="utf-8">
 
-<?php include '../dashboard/dash-chart.php' ;?>
-
 <div class="bot_token0">	
 
-<!--
-BOT TOKEN
--->
+
+<div class="bot_token00">
+
+<?php include '../dashboard/dash-buy.php' ;?>
+
 <div class="bot_token">
 <ul>
+<li><img src=""></li> 
 <li>📃 &nbsp;Contract: <b>0x698...1933</b></li>
 <li>🏦 &nbsp;Pool: <b>0x1195...7b58</b></li>
 <li>🧠 &nbsp;Score: <b>75/100</b></li>
@@ -29,6 +30,6 @@ BOT TOKEN
 </ul>
 </div>
 
-<?php include '../dashboard/dash-buy.php' ;?>
+</div>
 
 </div>
