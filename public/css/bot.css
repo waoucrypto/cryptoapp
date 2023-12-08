@@ -184,19 +184,17 @@ MODULES
 /*
 BOT TOKEN
 */
-.bot .bot_token0 {display:flex;width:100%;}
-
-.bot_token00 {display:flex;width:100%;justify-content:space-between;align-items:stretch;}
-
-.dash_buysell {width:49.5%;}
-.dash_buysell strong {display:none;}
-
-.bot_token {width:49.5%;}
-.bot_token {display:flex;flex-direction:column;padding:20px;}
-.bot_token ul {display:flex;flex-direction:column;width:100%;font-size:13px;line-height:2;}
-.bot_token ul li {display:flex;width:100%;text-align:center;min-height:10px;font-weight:300;}
-.bot_token ul li b {margin-left:5px;margin-right:5px;font-weight:400;}
-.bot_token ul li img {display:flex;width:100%;height:100px;background:red;margin-bottom:10px;border-radius:5px;overflow:hidden;object-fit:cover;object-position:center center;}
+.bot_token1 {display:flex;width:100%;}
+.bot_token2 {display:flex;width:100%;justify-content:space-between;align-items:stretch;}
+.bot_token2 .dash_buysell {width:49.5%;}
+.bot_token2 .dash_buysell strong {display:none;}
+.bot_token2 .dash_buysell ul li:nth-child(1) {margin-top:0;}
+.bot_token2 .bot_token {width:49.5%;}
+.bot_token2 .bot_token {display:flex;flex-direction:column;padding:10px;}
+.bot_token2 .bot_token ul {display:flex;flex-direction:column;width:100%;font-size:13px;line-height:2;}
+.bot_token2 .bot_token ul li {display:flex;width:100%;text-align:center;min-height:10px;font-weight:300;}
+.bot_token2 .bot_token ul li b {margin-left:5px;margin-right:5px;font-weight:400;}
+.bot_token2 .bot_token ul li img {display:flex;width:100%;height:100px;margin-bottom:10px;border-radius:7px;overflow:hidden;object-fit:cover;object-position:center center;border:1px solid var(--color-border);}
 
 
 
@@ -285,14 +283,7 @@ EMPTY
 .bot_empty2 ul li a span:nth-child(1) {font-size:16px;}
 .bot_empty2 ul li a span:nth-child(2) {font-size:14px;}
 .bot_empty2 ul::-webkit-scrollbar {display:none;}
-	
-.bot .bot_token0 {flex-direction:column;justify-content:flex-start;align-items:flex-start;}
-.bot .bot_token {width:100%;margin-bottom:10px;height:auto;}
-.bot .dash_buysell {width:100%;}
-	
-.bot .bot_token ul {justify-content:flex-start;align-items:flex-start;}	
-	
-	
+		
 	
 .bot_mobile {position:fixed;top:0;left:0;right:0;height:50px;background:var(--color-bloc);z-index:50;display:flex;align-items:center;justify-content:space-between;}
 .bot_mobile a:nth-child(1) {display:flex;flex-direction:column;padding-left:20px;width:100px;justify-content:flex-start;line-height:1;}
@@ -308,15 +299,9 @@ EMPTY
 	
 .bot_empty1 b {display:none;}
 
-.bot .dash_chart {display:none;}
 
-.bot .dash_buysell {border:none;}
-.bot .dash_buysell ul {padding:0;}
-.bot .bot_token {border:none;padding:0;}
 
 .bot_storm_message {display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;}
-
-.bot .dash_buysell ul li a {padding-top:15px;padding-bottom:15px;}
 
 
 
@@ -333,6 +318,12 @@ body {background:var(--color-bloc);}
 .dash_performance {width:100%;}
 
 
+.bot_token1 {height:100%;justify-content:flex-start;align-items:flex-start;}
+.bot_token2 {flex-direction:column;justify-content:flex-start;align-items:flex-start;}
+.bot_token2 .dash_buysell {width:100%;order:2;}
+.bot_token2 .dash_buysell ul li {height:50px;}
+.bot_token2 .bot_token {width:100%;order:1;}
+.bot_token2 .bot_token {display:flex;flex-direction:column;padding:10px;}
 
 
 .bot {position:relative;}

@@ -57,10 +57,10 @@ BOT EMPTY
 </div>
 <div class="bot_empty2">
 <ul>
+<li><a id="latest"><span>/latest</span><span>Listing of the new cryptos</span></a></li>
 <li><a id="searchh"><span>/search</span><span>Search a crypto</span></a></li>
 <li><a id="buy"><span>/snipe</span><span>Buy, Sell or Snipe cryptos</span></a></li>
 <li><a id="trending"><span>/trending</span><span>Listing of the trending cryptos</span></a></li>
-<li><a id="latest"><span>/latest</span><span>Listing of the new cryptos</span></a></li>
 <li><a id="profit"><span>/profit</span><span>Show your profit on a token</span></a></li>
 <li><a id="portfolio"><span>/portfolio</span><span>Show your current trades</span></a></li>
 <li><a id="performance"><span>/performance</span><span>Show your performance</span></a></li>
