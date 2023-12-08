@@ -8,7 +8,7 @@ BOT
 <div class="bot">
 
 <div class="bot_mobile">
-<a href="#" onclick="bot_mobile_side_open()"><span></span><span></span></a>
+<a onclick="bot_mobile_side_open()"><span></span><span></span></a>
 <a href="index.php">Storm</a>
 <a href="index.php"><i class="fa-regular fa-pen-to-square"></i></a>
 </div>

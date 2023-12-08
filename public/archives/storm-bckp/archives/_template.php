@@ -23,8 +23,8 @@ TEMPLATE
 </div>
 
 <div class="template_left_w2">
-<li><a href=""><i class="fa-brands fa-twitter"></i> Connect with Twitter</a></li>
-<li><a href=""><i class="fa-brands fa-discord"></i> Connect with Discord</a></li>
+<li><a><i class="fa-brands fa-twitter"></i> Connect with Twitter</a></li>
+<li><a><i class="fa-brands fa-discord"></i> Connect with Discord</a></li>
 </div>
 
 <div class="template_left_w3">
@@ -34,15 +34,15 @@ TEMPLATE
 </div>
 
 <div class="template_left_w2">
-<li><a href=""><i class="fa-solid fa-upload"></i> Image Banner</a></li>
-<li><a href=""><i class="fa-solid fa-upload"></i> Image About</a></li>
+<li><a><i class="fa-solid fa-upload"></i> Image Banner</a></li>
+<li><a><i class="fa-solid fa-upload"></i> Image About</a></li>
 </div>
 
 <div class="template_left_w1">
 <li><span>About</span><span><textarea></textarea></span></li>
 </div>
 
-<a href="" class="cta_request pink">Save</a>
+<a class="cta_request pink">Save</a>
 </ul>
 </div>
 </form>

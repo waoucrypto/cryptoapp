@@ -29,7 +29,7 @@ TRENDING
 
 <?php for ($i = 1; $i <= 10; $i++): ?>
 <li id="token">
-<a href="">
+<a>
 <span><img src="/images/doge.jpg"><div><b>Dogecoin</b><em>DOGE / ETH</em></div></span>
 <span class="green">+20%</span>
 <span>#<?php echo $i; ?></span>

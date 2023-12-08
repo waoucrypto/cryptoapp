@@ -15,20 +15,20 @@ CHART
 <div class="tradingview_link">
 <span>Official links</span>	
 <ul>
-<li><a href="" target="_blank"><img src="/storm/images/logos/etherscan.png"></a></li>
-<li><a href="" target="_blank"><img src="/storm/images/logos/web.svg"></a></li>
-<li><a href="" target="_blank"><img src="/storm/images/logos/x.svg"></a></li>
-<li><a href="" target="_blank"><img src="/storm/images/logos/telegram.svg"></a></li>
-<li><a href="" target="_blank"><img src="/storm/images/logos/coingecko.png"></a></li>
-<li><a href="" target="_blank"><img src="/storm/images/logos/coinmarketcap.jpg"></a></li>
+<li><a target="_blank"><img src="/storm/images/logos/etherscan.png"></a></li>
+<li><a target="_blank"><img src="/storm/images/logos/web.svg"></a></li>
+<li><a target="_blank"><img src="/storm/images/logos/x.svg"></a></li>
+<li><a target="_blank"><img src="/storm/images/logos/telegram.svg"></a></li>
+<li><a target="_blank"><img src="/storm/images/logos/coingecko.png"></a></li>
+<li><a target="_blank"><img src="/storm/images/logos/coinmarketcap.jpg"></a></li>
 </ul>
 </div>
 <div class="dash_price">
 <span>$0.00000113</span>
 </div>
 <div class="dash_pair">
-<span><em>PEPE</em> <a href="" target="_blank">0X698...1933</a> <i class="fa-regular fa-copy"></i></span>
-<span><em>POOL</em> <a href="" target="_blank">0XA43...EC9F</a> <i class="fa-regular fa-copy"></i></span>
+<span><em>PEPE</em> <a target="_blank">0X698...1933</a> <i class="fa-regular fa-copy"></i></span>
+<span><em>POOL</em> <a target="_blank">0XA43...EC9F</a> <i class="fa-regular fa-copy"></i></span>
 </div>
 <div class="dash_warning">
 <span><em>Renounced</em></span>

@@ -15,8 +15,8 @@ DASH TOP
 </ul>
 </div>
 <div class="dash_top_right">
-<a href=""><i class="fa-solid fa-circle-half-stroke"></i></a>
-<a href=""><img src="https://pbs.twimg.com/profile_images/1589013940675264515/rDHfI-Ua_400x400.png"></a>
+<a><i class="fa-solid fa-circle-half-stroke"></i></a>
+<a><img src="https://pbs.twimg.com/profile_images/1589013940675264515/rDHfI-Ua_400x400.png"></a>
 </div>
 </div>
 
@@ -31,8 +31,8 @@ DASH TOP2
 </div>
 <div class="dash_top2_right">
 <span>
-<a href="#" onClick="template_open()"><i class="fa-solid fa-pen-to-square"></i> Edit template collab</a>
-<a href="#" onClick="other_collect_open()"><img src="https://pbs.twimg.com/profile_images/1626340174270713856/9wEXyVPp_400x400.jpg"> Doodles <i class="fa-solid fa-chevron-down"></i></a>
+<a onClick="template_open()"><i class="fa-solid fa-pen-to-square"></i> Edit template collab</a>
+<a onClick="other_collect_open()"><img src="https://pbs.twimg.com/profile_images/1626340174270713856/9wEXyVPp_400x400.jpg"> Doodles <i class="fa-solid fa-chevron-down"></i></a>
 </span>
 <span>
 <a href="dashboard_collections.php"><img src="https://pbs.twimg.com/profile_images/1562687015203885056/mTiwCDoo_200x200.jpg"> Stay Cats</a>

@@ -16,7 +16,7 @@ SHARE
 </em>
 <em>
 <b>Download</b>
-<a id="downloadLink" href="#" download="storm.jpg"><i class="fa-solid fa-circle-down"></i></a>
+<a id="downloadLink" download="storm.jpg"><i class="fa-solid fa-circle-down"></i></a>
 </em>
 </span>
 </div>

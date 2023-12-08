@@ -29,7 +29,7 @@ PORTFOLIO
 
 <?php for ($i = 0; $i < 10; $i++): ?>
 <li id="token">
-<a href="">
+<a>
 <span><img src="/images/otsea.png"><div><b>Otsea</b><em>OTSEA / ETH</em></div></span>
 <span class="green">+20%</span>
 <span>2 ETH</span>

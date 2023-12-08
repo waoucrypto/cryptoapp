@@ -15,7 +15,7 @@ SHARE
 </em>
 <em>
 <b><?= $latrad["Download"][$_SESSION['langue']] ?> </b>
-<a id="downloadLink" href="#" ><i class="fa-solid fa-download"></i></a>
+<a id="downloadLink" ><i class="fa-solid fa-download"></i></a>
 </em>
 </span>
 <canvas id="imageCanvas"></canvas>

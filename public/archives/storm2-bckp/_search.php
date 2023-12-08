@@ -22,7 +22,7 @@ SEARCH
 
 <?php for ($i = 1; $i <= 20; $i++): ?>
 <li id="token">
-<a href="">
+<a>
 <span><img src="/storm/images/pepe.jpg"><div><b>Pepe</b><em>PEPE / ETH</em></div></span>
 <span class="green">+20%</span>
 <span>20MIN</span>

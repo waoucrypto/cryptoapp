@@ -113,7 +113,7 @@ LATEST
 .dash_list ul li a span:nth-child(4) {width:30px;justify-content:center;flex-shrink:0;}
 .dash_list ul li a span:nth-child(4) i:nth-child(1) {display:flex;color:var(--color-text2);}
 .dash_list ul li a span:nth-child(4) i:nth-child(2) {display:none;color:var(--color-text2);}
-.dash_list ul li:nth-child(1) {position:sticky;top:0;background:var(--color-bloc);z-index:1;height:30px;flex-shrink:0;padding:0;}
+.dash_list ul li:nth-child(1) {position:sticky;top:0;background:var(--color-bloc);z-index:1;height:30px;flex-shrink:0;padding:0;cursor:default;}
 .dash_list ul li:nth-child(1) a span {height:100%;color:var(--color-text2);font-size:10px;letter-spacing:0.5px;}
 .dash_list ul li:nth-last-child(1) {border:none;}
 .dash_list ul li:nth-child(2n) {background:var(--color-bloc3);border-radius:5px;}
@@ -170,7 +170,7 @@ BUY SELL
 .dash_buysell {display:flex;flex-direction:column;width:100%;height:100%;font-size:13px;}
 .dash_buysell ul {display:flex;width:100%;padding:10px;height:100%;flex-direction:column;justify-content:space-between;}
 .dash_buysell ul li {display:flex;width:100%;height:100%;margin:1% 0 1% 0;justify-content:center;align-items:center;position:relative;}
-.dash_buysell ul li a {letter-spacing:-0.5px;line-height:1;width:100%;height:100%;justify-content:center;align-items:center;display:flex;border-radius:5px;margin-right:2%;position:relative;background:var(--color-bloc3);border:1px solid var(--color-border);}
+.dash_buysell ul li a {letter-spacing:-0.5px;line-height:1;width:100%;height:100%;justify-content:center;align-items:center;display:flex;border-radius:5px;margin-right:2%;position:relative;background:var(--color-bloc3);border:1px solid var(--color-border);cursor:pointer;}
 .dash_buysell ul li a:nth-last-child(1) {margin-right:0;}
 .dash_buysell ul li a i {font-size:11px;display:flex;margin-right:7px;}
 .dash_buysell ul li a i.fa-solid.fa-sack-dollar {color:var(--color-yellow);}

@@ -9,6 +9,13 @@
 
 <div class="bot_token">
 <ul>
+<li>
+<img src="/images/pepe.jpg">
+<em>
+<u>PEPE</u>
+<u>PEPE / ETH</u>
+</em>
+</li> 
 <li><img src="/images/graph.jpg"></li> 
 <li>📃 &nbsp;Contract: <b>0x698...1933</b></li>
 <li>🏦 &nbsp;Pool: <b>0x1195...7b58</b></li>

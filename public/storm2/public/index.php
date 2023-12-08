@@ -70,14 +70,14 @@ GRID
 <div class="footer">
 <ul>
 <li>© 2023 Storm</li>
-<li><a href="">Privacy Policy</a></li>
-<li><a href="">Cookies</a></li>
-<li><a href="">Terms of use</a></li>
-<li><a href="">FAQ</a></li>
+<li><a>Privacy Policy</a></li>
+<li><a>Cookies</a></li>
+<li><a>Terms of use</a></li>
+<li><a>FAQ</a></li>
 </ul>
 <ul>
-<li><a href=""><i class="fa-brands fa-telegram"></i></a></li>
-<li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+<li><a><i class="fa-brands fa-telegram"></i></a></li>
+<li><a><i class="fa-brands fa-x-twitter"></i></a></li>
 </ul>
 </div>
 </div>

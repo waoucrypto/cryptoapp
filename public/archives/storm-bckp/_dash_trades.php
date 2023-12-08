@@ -21,7 +21,7 @@ star
 
 <ul>
 <?php for ($i = 0; $i < 10; $i++): ?>
-<li><a href=""><quote><img src="/storm/images/otsea.png"><div><span>Otsea</span><span>OTSEA / ETH</span></div></quote><quote><span class="green">2 ETH</span><span>TOTAL BUYS 0.1 ETH</span></quote></a></li>
+<li><a><quote><img src="/storm/images/otsea.png"><div><span>Otsea</span><span>OTSEA / ETH</span></div></quote><quote><span class="green">2 ETH</span><span>TOTAL BUYS 0.1 ETH</span></quote></a></li>
 <?php endfor; ?>
 </ul>
 

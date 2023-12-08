@@ -16,7 +16,7 @@ TEMPLATE
 </div>
 
 
-<a href="" class="cta_request">Save</a>
+<a class="cta_request">Save</a>
 </ul>
 </div>
 </form>

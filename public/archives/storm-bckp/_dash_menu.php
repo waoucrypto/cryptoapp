@@ -12,12 +12,12 @@ HEADER
 </div>
 <div class="dash_header_top_right">
 <span><i class="fa-solid fa-gas-pump"></i> <?= $datas['gasPriceInGwei']  ?> </span>
-<a href="" target="_blank" class="dash_header_top_right_circle"><i class="fa-solid fa-book-open"></i></a>
-<a href="#" id="toggleTheme" class="dash_header_top_right_circle"><i class="fa-solid fa-circle-half-stroke"></i></a>
-<a href="" target="_blank" class=""><?= $latrad["Follow us"][$_SESSION['langue']] ?> <i class="fa-brands fa-x-twitter"></i></a>
+<a target="_blank" class="dash_header_top_right_circle"><i class="fa-solid fa-book-open"></i></a>
+<a id="toggleTheme" class="dash_header_top_right_circle"><i class="fa-solid fa-circle-half-stroke"></i></a>
+<a target="_blank" class=""><?= $latrad["Follow us"][$_SESSION['langue']] ?> <i class="fa-brands fa-x-twitter"></i></a>
 <a href="/dashboard" class="on"><?= $latrad["Dashboard"][$_SESSION['langue']] ?> <i class="fa-solid fa-chart-line"></i></a>
 <a href="/storm/bot.php"><?= $latrad["Web Bot"][$_SESSION['langue']] ?> <i class="fa-solid fa-robot"></i></a>
-<a href="" target="_blank"><?= $latrad["Telegram Bot"][$_SESSION['langue']] ?> <i class="fa-brands fa-telegram"></i></a>
+<a target="_blank"><?= $latrad["Telegram Bot"][$_SESSION['langue']] ?> <i class="fa-brands fa-telegram"></i></a>
 <em id="lacrypto"> <i class="fa-solid fa-angle-down"></i></em>
 </div>
 </div>

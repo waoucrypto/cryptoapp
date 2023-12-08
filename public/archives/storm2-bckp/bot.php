@@ -23,7 +23,7 @@ BOT
 <div class="bot">
 
 <div class="bot_mobile">
-<a href="#" onclick="bot_mobile_side_open()"><span></span><span></span></a>
+<a onclick="bot_mobile_side_open()"><span></span><span></span></a>
 <a href="bot.php">Storm</a>
 <a href="bot.php"><i class="fa-regular fa-pen-to-square"></i></a>
 </div>

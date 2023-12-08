@@ -7,10 +7,10 @@ DASH TABLE
 <div class="dash_detail_title">
 <span><img src="https://pbs.twimg.com/profile_images/1626340174270713856/9wEXyVPp_400x400.jpg"> Doodles <quote><i class="fa-solid fa-certificate"></i><i class="fa-solid fa-check"></i></quote></span>
 <span>
-<a href="#" class="cta_request pink" onClick="popup_request_open()">Request</a>
-<a href="" class="cta_cancel dark">Cancel</a>
-<a href="" class="cta_draft grey2 border5"><em class="orange"></em> Draft</a>
-<a href="" class="cta_refused grey2 border5"><em class="red"></em> Refused</a></span>
+<a class="cta_request pink" onClick="popup_request_open()">Request</a>
+<a class="cta_cancel dark">Cancel</a>
+<a class="cta_draft grey2 border5"><em class="orange"></em> Draft</a>
+<a class="cta_refused grey2 border5"><em class="red"></em> Refused</a></span>
 </div>
 
 <div class="dash_detail_content">
@@ -23,14 +23,14 @@ The project is interesting but no information on the price of mint and supply. B
 </div>
 
 <div class="dash_detail_requirements">
-<strong><span>Requirements</span> <span><a href="#" class="cta_edit border" onClick="popup_request_open()"><i class="fa-solid fa-pen"></i></a></span></strong>
+<strong><span>Requirements</span> <span><a class="cta_edit border" onClick="popup_request_open()"><i class="fa-solid fa-pen"></i></a></span></strong>
 <ul>
 <li><em class="green2">100</em><span>Spots<br>Allocated</span></li>
 <li><i class="fa-regular fa-circle-xmark green2"></i><span>Follow<br>Discord</span></li>
 <li><i class="fa-regular fa-circle-check green2"></i><span>Follow<br>Twitter</span></li>
 <li><i class="fa-regular fa-circle-check red2"></i><span>Like &<br>Retweet</span></li>
 <li><i class="fa-regular fa-circle-xmark red2"></i><span>Share<br>to frens</span></li>
-<li><a href="#" onClick="popup_detail_open()">More</a></li>
+<li><a onClick="popup_detail_open()">More</a></li>
 </ul>
 </div>
 

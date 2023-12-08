@@ -16,7 +16,7 @@ CHART
 <span><?= $latrad["Official links"][$_SESSION['langue']] ?></span>	
 <ul>
 <li><a href="https://etherscan.io/address/<?= $parts[1]  ?>" target="_blank"><img src="/images/logos/etherscan.png"></a></li>
-<li><a id="lienSite" href="" target="_blank"><img src="/images/logos/web.svg"></a></li>
+<li><a id="lienSite" target="_blank"><img src="/images/logos/web.svg"></a></li>
 <li><a id="lienTwitter" target="_blank"><img src="/images/logos/x.svg"></a></li>
 <li><a id="lienDiscord" target="_blank"><img src="/images/logos/x.svg"></a></li>
 <li><a id="lienTelegram" target="_blank"><img src="/images/logos/telegram.svg"></a></li>
@@ -28,8 +28,8 @@ CHART
 <span id="cryptoprix"></span>
 </div>
 <div class="dash_pair">
-<span><em id="cryptosymbol"></em> <a href="" target="_blank" id="cryptosymboladd"></a> <i class="fa-regular fa-copy"></i></span>
-<span><em id="cryptopair"></em> <a href="" target="_blank" id="cryptopairadd"></a> <i class="fa-regular fa-copy"></i></span>
+<span><em id="cryptosymbol"></em> <a target="_blank" id="cryptosymboladd"></a> <i class="fa-regular fa-copy"></i></span>
+<span><em id="cryptopair"></em> <a target="_blank" id="cryptopairadd"></a> <i class="fa-regular fa-copy"></i></span>
 </div>
 <div class="dash_warning">
 <span><em><?= $latrad["Renounced"][$_SESSION['langue']] ?></em></span>

@@ -9,8 +9,8 @@ POPUP PICKED
 <form>
 <strong>Picked</strong>
 <ul>
-<li><a href="#" class="on">From Alphabot</a><a href="#">From Premint</a></li>
-<li><a href="#"><i class="fa-solid fa-upload"></i> Upload CSV</a></li>
+<li><a class="on">From Alphabot</a><a>From Premint</a></li>
+<li><a><i class="fa-solid fa-upload"></i> Upload CSV</a></li>
 <li><span>Wallet address</span><span><em class="on"><a></a><a></a></em></span></li>
 <li><span>Discord</span><span><em class="on"><a></a><a></a></em></span></li>
 <li><span>Discord ID</span><span><em class="on"><a></a><a></a></em></span></li>

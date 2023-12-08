@@ -33,11 +33,11 @@ BOT SIDE
 <div class="bot_side_center">
 <ul>
 <li><b>Portfolio</b></li>
-<li><a href="#" id="token"><span>$PEPE</span></a></li>
-<li><a href="#"><span>$DOGE</span></a></li>
-<li><a href="#"><span>$JOE</span></a></li>
-<li><a href="#"><span>$SHIBA</span></a></li>
-<li><a href="#"><span>$OTSEA</span></a></li>
+<li><a id="token"><span>$PEPE</span></a></li>
+<li><a><span>$DOGE</span></a></li>
+<li><a><span>$JOE</span></a></li>
+<li><a><span>$SHIBA</span></a></li>
+<li><a><span>$OTSEA</span></a></li>
 </ul>
 </div>
 
@@ -46,10 +46,10 @@ BOT SIDE
 
 <div>
 <span>
-<a href=""><i class="fa-solid fa-user-plus"></i> Refer a friend <i class="fa-solid fa-plus"></i></a>
+<a><i class="fa-solid fa-user-plus"></i> Refer a friend <i class="fa-solid fa-plus"></i></a>
 </span>
 <span>
-<a href="#" onClick="bot_menu()"><i class="fa-regular fa-circle-user"></i> 0X898...4521 <i class="fa-solid fa-angle-down"></i></a>
+<a onClick="bot_menu()"><i class="fa-regular fa-circle-user"></i> 0X898...4521 <i class="fa-solid fa-angle-down"></i></a>
 </span>
 <span>
 <a href="/storm2/bot/" class="on">Web Bot <i class="fa-solid fa-robot"></i></a>
@@ -59,12 +59,12 @@ BOT SIDE
 	
 <ul>
 <li><a href="/storm2/dashboard/"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-<li><a href="" target="_blank"><i class="fa-brands fa-telegram"></i>Telegram Bot</a></li>
+<li><a target="_blank"><i class="fa-brands fa-telegram"></i>Telegram Bot</a></li>
 <li><a href="/storm2/bot/"><i class="fa-solid fa-robot"></i> Web Bot</a></li>
-<li><a href="#" id="toggleTheme" class="bot_side_circle"><i class="fa-solid fa-circle-half-stroke"></i>Dark/Light</a></li>
-<li><a href="" target="_blank"><i class="fa-solid fa-book"></i> Help</a></li>
-<li><a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i> Follow us</a></li>
-<li><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></li>
+<li><a id="toggleTheme" class="bot_side_circle"><i class="fa-solid fa-circle-half-stroke"></i>Dark/Light</a></li>
+<li><a target="_blank"><i class="fa-solid fa-book"></i> Help</a></li>
+<li><a target="_blank"><i class="fa-brands fa-x-twitter"></i> Follow us</a></li>
+<li><a><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></li>
 </ul>
 </div>
 	
