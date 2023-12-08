@@ -1,7 +1,15 @@
+
+<!--
+BOT MESSAGE
+-->
+<div class="bot_message">
+$PEPE
+</div>
+
+
 <meta charset="utf-8">
 
 <div class="bot_token1">	
-
 
 <div class="bot_token2">
 
@@ -10,13 +18,17 @@
 <div class="bot_token">
 <ul>
 <li>
+<div> 
 <img src="/images/pepe.jpg">
 <em>
 <u>PEPE</u>
 <u>PEPE / ETH</u>
 </em>
+</div>
+<div> 
+<img src="/images/graph.jpg">
+</div>
 </li> 
-<li><img src="/images/graph.jpg"></li> 
 <li>📃 &nbsp;Contract: <b>0x698...1933</b></li>
 <li>🏦 &nbsp;Pool: <b>0x1195...7b58</b></li>
 <li>🧠 &nbsp;Score: <b>75/100</b></li>
