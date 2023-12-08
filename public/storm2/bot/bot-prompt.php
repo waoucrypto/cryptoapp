@@ -57,12 +57,6 @@ BOT EMPTY
 </div>
 <div class="bot_empty2">
 <ul>
-<!--
-<li><a id="buy"><span>Snipe</span><span>Buy, Sell or Snipe cryptos</span></a></li>
-<li><a id="wallet"><span>Wallet</span><span>Add your wallet metamask</span></a></li>
-<li><a id="trending"><span>Trending</span><span>Listing of the trending cryptos</span></a></li>
-<li><a id="latest"><span>Latest</span><span>Listing of the new cryptos</span></a></li>
--->
 <li><a id="searchh"><span>/search</span><span>Search a crypto</span></a></li>
 <li><a id="buy"><span>/snipe</span><span>Buy, Sell or Snipe cryptos</span></a></li>
 <li><a id="trending"><span>/trending</span><span>Listing of the trending cryptos</span></a></li>
@@ -103,6 +97,7 @@ BOT CENTER
 
 
 <script>
+
 $(document).ready(function() {
     var currentSelectionIndex = -1;
 
@@ -274,29 +269,30 @@ $(document).ready(function() {
 
 	
 function loadContentWithLoader(newStorm, loadFile, callback, focusSelector) {
-    // Affichage du loader
     showLoader(newStorm);
 
-    // Chargement du contenu
-    newStorm.find('.bot_storm_message').load(loadFile, function() {
-        // Retirer le loader une fois que le contenu est chargé
-        hideLoader(newStorm);
+    setTimeout(function() {
+        newStorm.find('.bot_storm_message').load(loadFile, function() {
+            hideLoader(newStorm);
 
-        // Effectuer le défilement après un bref délai pour assurer le rendu complet du contenu
-        setTimeout(function() {
-            anchorAfterLoading(newStorm);
-
-            if (typeof callback === 'function') {
-                callback();
-            }
-
-            // Mettre le focus si focusSelector est défini
-            if (focusSelector) {
-                $(focusSelector).focus();
-            }
-        }, 500); // Ajustez ce délai si nécessaire
-    });
+            setTimeout(function() {
+                anchorAfterLoading(newStorm);
+                if (typeof callback === 'function') {
+                    callback();
+                }
+                if (focusSelector) {
+                    $(focusSelector).focus();
+                }
+                // Défilement automatique de 50% de la hauteur de la fenêtre de visualisation
+                var scrollAmount = $(window).height() * 0.5;
+                $('html, body').animate({ scrollTop: '+=' + scrollAmount }, 0);
+            }, 0);
+        });
+    }, 1000); // Délai de 2 secondes
 }
+
+
+
 
 function showLoader(element) {
     element.find('.bot_storm_message').html('<span class="loader1"><span class="loader2"></span></span>');
@@ -315,9 +311,8 @@ function anchorAfterLoading(newElement) {
 
 
 
-
-
 	
 });
+
 	
 </script>
