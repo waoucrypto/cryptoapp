@@ -254,65 +254,46 @@ $(document).ready(function() {
     }
 
     function scrollToNewElement(newElement) {
-    // Calcule la position de l'élément par rapport au haut du document
     var elementPosition = newElement.offset().top;
-
-    // Ajuste la position pour remonter de 100 pixels au-dessus de l'élément
     var adjustedPosition = elementPosition - 100;
-
-    // Effectue le défilement jusqu'à la position ajustée
     $('html, body').animate({ scrollTop: adjustedPosition }, 400);
-}
-
-
-
-
+    }
 	
-function loadContentWithLoader(newStorm, loadFile, callback, focusSelector) {
-    showLoader(newStorm);
+    function loadContentWithLoader(newStorm, loadFile, callback, focusSelector) {
+        showLoader(newStorm);
 
-    setTimeout(function() {
-        newStorm.find('.bot_storm_message').load(loadFile, function() {
-            hideLoader(newStorm);
+        setTimeout(function() {
+            newStorm.find('.bot_storm_message').load(loadFile, function() {
+                hideLoader(newStorm);
 
-            setTimeout(function() {
-                anchorAfterLoading(newStorm);
-                if (typeof callback === 'function') {
-                    callback();
-                }
-                if (focusSelector) {
-                    $(focusSelector).focus();
-                }
-                // Défilement automatique de 50% de la hauteur de la fenêtre de visualisation
-                var scrollAmount = $(window).height() * 0.5;
-                $('html, body').animate({ scrollTop: '+=' + scrollAmount }, 0);
-            }, 0);
-        });
-    }, 1000); // Délai de 2 secondes
-}
+                setTimeout(function() {
+                    anchorAfterLoading(newStorm);
+                    if (typeof callback === 'function') {
+                        callback();
+                    }
+                    if (focusSelector) {
+                        $(focusSelector).focus();
+                    }
+                    var scrollAmount = $(window).height() * 0.5;
+                    $('html, body').animate({ scrollTop: '+=' + scrollAmount }, 0);
+                }, 0);
+            });
+        }, 1000);
+    }
 
+    function showLoader(element) {
+        element.find('.bot_storm_message').html('<span class="loader1"><span class="loader2"></span></span>');
+    }
 
+    function hideLoader(element) {
+        element.find('.bot_storm_message').find('.loader1').remove();
+    }
 
+    function anchorAfterLoading(newElement) {
+        var offsetTop = newElement.offset().top - $('.bot_center').offset().top;
+        var scrollAmount = $('.bot_center').scrollTop() + offsetTop - 100;
+        $('.bot_center').animate({ scrollTop: scrollAmount }, 400);
+    }
 
-function showLoader(element) {
-    element.find('.bot_storm_message').html('<span class="loader1"><span class="loader2"></span></span>');
-}
-
-function hideLoader(element) {
-    element.find('.bot_storm_message').find('.loader1').remove();
-}
-
-function anchorAfterLoading(newElement) {
-    var offsetTop = newElement.offset().top - $('.bot_center').offset().top;
-    var scrollAmount = $('.bot_center').scrollTop() + offsetTop - 100;
-    $('.bot_center').animate({ scrollTop: scrollAmount }, 400);
-}
-
-
-
-
-	
-});
-
-	
+});	
 </script>
