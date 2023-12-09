@@ -278,7 +278,7 @@ $(document).ready(function() {
                     $('html, body').animate({ scrollTop: '+=' + scrollAmount }, 0);
                 }, 0);
             });
-        }, 1000);
+        }, 1500);
     }
 
     function showLoader(element) {
