@@ -97,95 +97,111 @@ BOT CENTER
 
 
 <script>
-
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
     var currentSelectionIndex = -1;
 
-	$('#openbot-search_menu').on('click', function() {
-		setTimeout(function() {
-			$('#searchInput').val('/').trigger('input').focus();
-		}, 0);
-	});
-	
-    $('#searchInput').on('input', function(e) {
-        var inputVal = $(this).val().trim();
-        currentSelectionIndex = -1;
-        $('.bot_search_menu ul li').removeClass('selected');
+    document.getElementById('openbot-search_menu').addEventListener('click', function() {
+        setTimeout(function() {
+            var searchInput = document.getElementById('searchInput');
+            searchInput.value = '/';
+            searchInput.dispatchEvent(new Event('input'));
+            searchInput.focus();
+        }, 0);
+    });
 
-        if(inputVal.startsWith("/")) {
-            $('.bot_search_menu').show();
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+        var inputVal = e.target.value.trim();
+        currentSelectionIndex = -1;
+        document.querySelectorAll('.bot_search_menu ul li').forEach(function(li) {
+            li.classList.remove('selected');
+        });
+
+        if (inputVal.startsWith("/")) {
+            document.querySelector('.bot_search_menu').style.display = 'block';
             filterMenuItems(inputVal.substring(1).toLowerCase());
         } else {
-            $('.bot_search_menu').hide();
+            document.querySelector('.bot_search_menu').style.display = 'none';
         }
     });
 
     function filterMenuItems(searchStr) {
-        $('.bot_search_menu ul li').toggle(searchStr === "").filter(function() {
-            return $(this).text().trim().toLowerCase().includes(searchStr);
-        }).show();
+        document.querySelectorAll('.bot_search_menu ul li').forEach(function(li) {
+            if (searchStr === "" || li.textContent.trim().toLowerCase().includes(searchStr)) {
+                li.style.display = 'block';
+            } else {
+                li.style.display = 'none';
+            }
+        });
     }
 
-    $('#searchInput').on('keydown', function(e) {
-        var $listItems = $('.bot_search_menu ul li:visible');
-        var max = $listItems.length;
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+        var listItems = Array.from(document.querySelectorAll('.bot_search_menu ul li')).filter(function(li) {
+            return li.style.display === 'block';
+        });
+        var max = listItems.length;
 
-        if ($('.bot_search_menu').is(':visible')) {
+        if (document.querySelector('.bot_search_menu').style.display === 'block') {
             switch (e.key) {
                 case 'ArrowDown':
                 case 'ArrowUp':
                     e.preventDefault();
-                    navigateMenu(e.key === 'ArrowDown' ? 'down' : 'up', $listItems, max);
+                    navigateMenu(e.key === 'ArrowDown' ? 'down' : 'up', listItems, max);
                     break;
                 case 'Enter':
                     e.preventDefault();
-                    var $selectedItem = $('.bot_search_menu ul li.selected a');
-                    if ($selectedItem.length) $selectedItem.trigger('click');
+                    var selectedItem = document.querySelector('.bot_search_menu ul li.selected a');
+                    if (selectedItem) selectedItem.click();
                     break;
             }
         }
     });
 
-    function navigateMenu(direction, $listItems, max) {
+    function navigateMenu(direction, listItems, max) {
         currentSelectionIndex = (direction === 'down') ? 
             (currentSelectionIndex < max - 1 ? currentSelectionIndex + 1 : 0) : 
             (currentSelectionIndex > 0 ? currentSelectionIndex - 1 : max - 1);
 
-        $listItems.removeClass('selected').eq(currentSelectionIndex).addClass('selected');
+        listItems.forEach(function(li, index) {
+            li.classList.remove('selected');
+            if (index === currentSelectionIndex) {
+                li.classList.add('selected');
+            }
+        });
     }
 
-    $(document).on('click', function(e) {
-        var $menu = $('.bot_search_menu');
-        if (!$menu.is(e.target) && !$menu.has(e.target).length && !$('#searchInput').is(e.target)) {
-            $menu.hide();
-            $('#searchInput').val('');
-            $('.bot_search_menu ul li').removeClass('selected');
+    document.addEventListener('click', function(e) {
+        var menu = document.querySelector('.bot_search_menu');
+        if (!menu.contains(e.target) && !document.getElementById('searchInput').contains(e.target)) {
+            menu.style.display = 'none';
+            document.getElementById('searchInput').value = '';
+            document.querySelectorAll('.bot_search_menu ul li').forEach(function(li) {
+                li.classList.remove('selected');
+            });
             currentSelectionIndex = -1;
         }
     });
 
-	function handleMenuClick(selector, loadFile) {
-		$(document).on('click', selector, function(e) {
-			e.preventDefault();
-			var menuItem = $(this).find('span:first').text();
-			$('#searchInput').val('');
-			var newYou = $('.bot_you').first().clone(true).css('display', 'flex');
-			var newStorm = $('.bot_storm').first().clone(true).css('display', 'flex');
-			newYou.find('.bot_you_message').text(menuItem);
-			$('.bot_center2').append(newYou, newStorm);
-			$('.bot_search_menu, .bot_empty').hide();
-			scrollToNewElement(newYou);
-			loadContentWithLoader(newStorm, loadFile);
-			if (loadFile === 'bot-search.php') {
-				loadContentWithLoader(newStorm, 'bot-search.php', null, '.search_bloc input[type="text"]');
-			} else {
-				loadContentWithLoader(newStorm, loadFile);
-			}
-		});
-	}
+    function handleMenuClick(selector, loadFile) {
+        document.addEventListener('click', function(e) {
+            if (e.target.matches(selector) || e.target.closest(selector)) {
+                e.preventDefault();
+                var menuItem = e.target.closest(selector).querySelector('span:first-child').textContent;
+                document.getElementById('searchInput').value = '';
+                var newYou = document.querySelector('.bot_you').cloneNode(true);
+                newYou.style.display = 'flex';
+                newYou.querySelector('.bot_you_message').textContent = menuItem;
+                var newStorm = document.querySelector('.bot_storm').cloneNode(true);
+                newStorm.style.display = 'flex';
+                document.querySelector('.bot_center2').append(newYou, newStorm);
+                document.querySelector('.bot_search_menu').style.display = 'none';
+                document.querySelector('.bot_empty').style.display = 'none';
+                scrollToNewElement(newYou);
+                loadContentWithLoader(newStorm, loadFile);
+            }
+        });
+    }
 
     var menuItems = [
-
         { selector: '.bot_search #latest', loadFile: 'bot-latest.php' },
         { selector: '.bot_search #trending', loadFile: 'bot-trending.php' },
         { selector: '.bot_search #buy', loadFile: 'bot-snipe.php' },
@@ -195,105 +211,101 @@ $(document).ready(function() {
         { selector: '.bot_search #wallet', loadFile: 'bot-wallet.php' }, 
         { selector: '.bot_search #token', loadFile: 'bot-buy.php' },
 
-		{ selector: '.bot_empty #searchh', loadFile: 'bot-search.php' },
-		{ selector: '.bot_empty #buy', loadFile: 'bot-snipe.php' },
-		{ selector: '.bot_empty #trending', loadFile: 'bot-trending.php' },
-		{ selector: '.bot_empty #latest', loadFile: 'bot-latest.php' },
-		{ selector: '.bot_empty #wallet', loadFile: 'bot-wallet.php' },
-		{ selector: '.bot_empty #profit', loadFile: 'bot-profit.php' },
-		{ selector: '.bot_empty #performance', loadFile: 'bot-performance.php' },
-		{ selector: '.bot_empty #portfolio', loadFile: 'bot-portfolio.php' },
+        { selector: '.bot_empty #searchh', loadFile: 'bot-search.php' },
+        { selector: '.bot_empty #buy', loadFile: 'bot-snipe.php' },
+        { selector: '.bot_empty #trending', loadFile: 'bot-trending.php' },
+        { selector: '.bot_empty #latest', loadFile: 'bot-latest.php' },
+        { selector: '.bot_empty #wallet', loadFile: 'bot-wallet.php' },
+        { selector: '.bot_empty #profit', loadFile: 'bot-profit.php' },
+        { selector: '.bot_empty #performance', loadFile: 'bot-performance.php' },
+        { selector: '.bot_empty #portfolio', loadFile: 'bot-portfolio.php' },
 
-		{ selector: '.search_bloc ul li#token', loadFile: 'bot-buy.php' },
-		{ selector: '.dash_latest ul li#token', loadFile: 'bot-buy.php' },
-		{ selector: '.bot_side_center ul li a#token', loadFile: 'bot-buy.php' },
-		{ selector: '.bot_search a#searchh', loadFile: 'bot-search.php' },
-		{ selector: '.bot .bot_message a#searchh', loadFile: 'bot-search.php' },
+        { selector: '.search_bloc ul li#token', loadFile: 'bot-buy.php' },
+        { selector: '.dash_latest ul li#token', loadFile: 'bot-buy.php' },
+        { selector: '.bot_side_center ul li a#token', loadFile: 'bot-buy.php' },
+        { selector: '.bot_search a#searchh', loadFile: 'bot-search.php' },
+        { selector: '.bot .bot_message a#searchh', loadFile: 'bot-search.php' },
     ];
 
     menuItems.forEach(function(item) {
         handleMenuClick(item.selector, item.loadFile);
     });
 
-    $('#searchInput').on('keydown', function(e) {
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
             e.preventDefault();
-            var inputVal = $(this).val().trim();
+            var inputVal = e.target.value.trim();
             var isERC20Token = /^0x[a-fA-F0-9]{40}$/.test(inputVal);
 
             if (isERC20Token) {
                 handleTokenInput(inputVal);
             } else {
-                $('#searchInput').val('');
+                e.target.value = '';
             }
         }
     });
 
     function handleTokenInput(token) {
-        var newYou = $('.bot_you').first().clone(true).css('display', 'flex');
-        newYou.find('.bot_you_message').text(token);
-        var newStorm = $('.bot_storm').first().clone(true).css('display', 'flex');
-        $('.bot_center2').append(newYou, newStorm);
-        $('.bot_empty').hide();
+        var newYou = document.querySelector('.bot_you').cloneNode(true);
+        newYou.style.display = 'flex';
+        newYou.querySelector('.bot_you_message').textContent = token;
+        var newStorm = document.querySelector('.bot_storm').cloneNode(true);
+        newStorm.style.display = 'flex';
+        document.querySelector('.bot_center2').append(newYou, newStorm);
+        document.querySelector('.bot_empty').style.display = 'none';
         scrollToNewElement(newYou);
-        newYou.data('token', token);
-    	$('#searchInput').val('');
-		loadContentWithLoader(newStorm, 'bot-buy.php');
-    }
-
-    function handleTokenInput(token) {
-        var newYou = $('.bot_you').first().clone(true).css('display', 'flex');
-        newYou.find('.bot_you_message').text(token);
-        var newStorm = $('.bot_storm').first().clone(true).css('display', 'flex');
-        $('.bot_center2').append(newYou, newStorm);
-        $('.bot_empty').hide();
-        scrollToNewElement(newYou);
-        newYou.data('token', token);
-    	$('#searchInput').val('');
-		loadContentWithLoader(newStorm, 'bot-buy.php');
+        newYou.dataset.token = token;
+        document.getElementById('searchInput').value = '';
+        loadContentWithLoader(newStorm, 'bot-buy.php');
     }
 
     function scrollToNewElement(newElement) {
-    var elementPosition = newElement.offset().top;
-    var adjustedPosition = elementPosition - 100;
-    $('html, body').animate({ scrollTop: adjustedPosition }, 400);
+        var elementPosition = newElement.getBoundingClientRect().top + window.pageYOffset;
+        var adjustedPosition = elementPosition - 100;
+        window.scrollTo({ top: adjustedPosition, behavior: 'smooth' });
     }
-	
-    function loadContentWithLoader(newStorm, loadFile, callback, focusSelector) {
-        showLoader(newStorm);
 
-        setTimeout(function() {
-            newStorm.find('.bot_storm_message').load(loadFile, function() {
+    function loadContentWithLoader(newStorm, loadFile, callback, focusSelector) {
+    showLoader(newStorm);
+
+    setTimeout(function() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                newStorm.querySelector('.bot_storm_message').innerHTML = xhr.responseText;
                 hideLoader(newStorm);
 
-                setTimeout(function() {
-                    anchorAfterLoading(newStorm);
-                    if (typeof callback === 'function') {
-                        callback();
-                    }
-                    if (focusSelector) {
-                        $(focusSelector).focus();
-                    }
-                    var scrollAmount = $(window).height() * 0.5;
-                    $('html, body').animate({ scrollTop: '+=' + scrollAmount }, 0);
-                }, 0);
-            });
-        }, 1500);
-    }
+                anchorAfterLoading(newStorm);
+                if (typeof callback === 'function') {
+                    callback();
+                }
+                if (focusSelector) {
+                    document.querySelector(focusSelector).focus();
+                }
+                var scrollAmount = window.innerHeight * 0.5;
+                window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+            }
+        };
+
+        xhr.open('GET', loadFile, true);
+        xhr.send();
+    }, 1500);
+}
+
 
     function showLoader(element) {
-        element.find('.bot_storm_message').html('<span class="loader1"><span class="loader2"></span></span>');
+        element.querySelector('.bot_storm_message').innerHTML = '<span class="loader1"><span class="loader2"></span></span>';
     }
 
     function hideLoader(element) {
-        element.find('.bot_storm_message').find('.loader1').remove();
+        var loader = element.querySelector('.loader1');
+        if (loader) loader.remove();
     }
 
     function anchorAfterLoading(newElement) {
-        var offsetTop = newElement.offset().top - $('.bot_center').offset().top;
-        var scrollAmount = $('.bot_center').scrollTop() + offsetTop - 100;
-        $('.bot_center').animate({ scrollTop: scrollAmount }, 400);
+        var offsetTop = newElement.getBoundingClientRect().top + window.pageYOffset - document.querySelector('.bot_center').getBoundingClientRect().top;
+        var scrollAmount = document.querySelector('.bot_center').scrollTop + offsetTop - 100;
+        document.querySelector('.bot_center').scrollTo({ top: scrollAmount, behavior: 'smooth' });
     }
-
-});	
+});
 </script>
