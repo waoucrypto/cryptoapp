@@ -344,6 +344,8 @@ body {background:var(--color-bloc);}
 .bot_token2 .bot_token ul li:nth-child(1) {display:none;}
 .bot_token2 .bot_token ul .bot_token_ico {padding:0 10px 10px 10px;display:flex;}
 
+.bot_token2 .dash_buysell ul {height:100%;}
+.bot_token3 .bot_token_ico {display:none;}
 
 .bot {position:relative;}
 .bot_left {position:fixed;}
