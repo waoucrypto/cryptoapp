@@ -63,6 +63,7 @@ CHART
         "enable_publishing": false,
         "hide_legend": true,
         "hide_side_toolbar": false,
+        "hide_volume": true,
   		  "backgroundColor": backgroundColor,
 		    "toolbar_bg": backgroundColor,
         "container_id": "tradingview_40607",

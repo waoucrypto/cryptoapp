@@ -4,6 +4,7 @@ RESET --------------------------------------------------------------------------
 */
 
 *{margin:0;padding:0;-moz-box-sizing:border-box;box-sizing:border-box;}
+*::-webkit-scrollbar {display:none;}
 html, body {height:100%;scroll-behavior:smooth;}
 html {font-size:100%;} 
 body {font-family:'Poppins';margin:0;padding:0;line-height:1.6;color:#8e9297;font-size:16px;background:#36393f;}
