@@ -202,14 +202,14 @@ BOT TOKEN
 .bot_token2 .bot_token ul .bot_token_ico {padding:5px 10px 10px 10px;display:none;}
 .bot_token2 .bot_token ul li {display:flex;width:100%;align-items:center;justify-content:space-between;min-height:15px;font-weight:300;padding:0 10px 0 10px;font-weight:300;}
 .bot_token2 .bot_token ul li b {margin-left:5px;margin-right:5px;font-weight:500;}
-.bot_token2 .bot_token ul li e {font-weight:300;display:inline-block;margin-left:7px;}
+.bot_token2 .bot_token ul li e {font-weight:400;display:inline-block;margin-left:7px;color:var(--color-text2);}
 .bot_token2 .bot_token ul li a {text-decoration:underline;cursor:pointer;}
 .bot_token2 .bot_token ul li i {width:30px;text-align:center;}
-.bot_token2 .bot_token ul li i.fa-lock {width:auto;margin-left:7px;}
+.bot_token2 .bot_token ul li i.fa-lock {width:auto;margin-left:7px;color:var(--color-text2);}
 .bot_token2 .bot_token ul li i.fa-circle-check {width:auto;color:var(--color-green);margin-left:2px;}
 .bot_token2 .bot_token ul li i.fa-check {width:auto;color:var(--color-green);}
-.bot_token2 .bot_token ul li i.fa-link {width:auto;margin-left:4px;cursor:pointer;}
-.bot_token2 .bot_token ul li i.fa-copy {width:auto;margin-left:4px;cursor:pointer;}
+.bot_token2 .bot_token ul li i.fa-link {width:auto;margin-left:4px;cursor:pointer;color:var(--color-text2);}
+.bot_token2 .bot_token ul li i.fa-copy {width:auto;margin-left:4px;cursor:pointer;color:var(--color-text2);}
 .bot_token2 .bot_token ul li:nth-child(2) {padding-left:17px;font-weight:800;padding-bottom:10px;font-size:20px;margin-top:5px;}
 
 .bot_token2 .bot_token ul li span {display:flex;align-items:center;color:var(--color-text2);font-weight:400;}
