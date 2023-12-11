@@ -343,9 +343,10 @@ body {background:var(--color-bloc);}
 .bot_token2 {flex-direction:column;justify-content:flex-start;align-items:flex-start;}
 .bot_token2 .dash_buysell ul li {height:50px;}
 .bot_token2 .bot_token3 {width:100%;order:2;}
-.bot_token2 .bot_token {width:100%;order:1;margin-bottom:10px;display:flex;flex-direction:column;padding:10px;}
-.bot_token2 .bot_token ul .bot_token_ico {padding:0 10px 10px 10px;display:flex;}
-.bot_token2 .bot_token ul li:nth-child(2) {margin-top:-5px;}
+.bot_token2 .bot_token {width:100%;order:1;margin-bottom:10px;display:flex;flex-direction:column;}
+.bot_token2 .bot_token ul .bot_token_ico {padding:2px 10px 10px 12px;display:flex;}
+.bot_token2 .bot_token ul li:nth-child(2) {margin-top:-2px;margin-bottom:-2px;}
+.bot_token2 .bot_token ul li {padding:0 8px 0 8px;}
 
 .bot_token2 .dash_buysell ul {height:100%;}
 .bot_token3 .bot_token_ico {display:none;}
