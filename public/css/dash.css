@@ -162,6 +162,10 @@ OVERVIEW
 .dash_overview ul div span:nth-child(6) b:nth-child(2) {width:auto;}
 .dash_overview ul li span:nth-child(2) i.fa-solid.fa-lock em {display:none;}
 .dash_overview ul li span:nth-child(2) i.fa-solid.fa-lock:hover em {position:absolute;top:25px;left:-120px;white-space:normal;flex-shrink:0;width:140px;background:var(--color-border);height:18px;display:flex;justify-content:center;align-items:center;letter-spacing:1px;border-radius:3px;text-transform:lowercase;line-height:1;}
+.dash_overview ul li:nth-last-child(1) {display:none;}
+.dash_overview ul li:nth-last-child(2) {display:none;}
+.dash_overview ul li:nth-last-child(3) {display:none;}
+.dash_overview ul li:nth-last-child(4) {display:none;}
 
 
 /*
