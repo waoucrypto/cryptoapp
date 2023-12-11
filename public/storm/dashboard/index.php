@@ -1,5 +1,6 @@
 <?php include '_layout1.php' ;?>
 <?php include '../trad.php' ;?>
+<?php require_once(__DIR__ .'/../../api/init.php'); ?>
 
 
 <?php
@@ -29,6 +30,70 @@ if (!isset($_SESSION['langue'])) {
    }
 		 
 	?>	 
+
+
+
+
+
+
+
+<?php 
+function formatNumber($num) {
+    if ($num >= 1000000) {
+        return number_format($num / 1000000, 2) . 'M';
+    } else if ($num >= 1000) {
+        return number_format($num / 1000, 2) . 'K';
+    } else {
+        return (string)$num;
+    }
+}
+
+
+
+function formatDateDiff($futureDate) {
+  $now = new DateTime();
+  $future = new DateTime($futureDate);
+  $diff = $now->diff($future);
+
+  $years = $diff->y;
+  $months = $diff->m;
+  $days = $diff->d;
+
+  if ($years > 0) {
+      // Format en années + mois si plus de 12 mois
+      return "$years years and $months months";
+  } elseif ($months > 0) {
+      // Format en mois + jours si moins de 12 mois
+      return "$months months and $days days ";
+  } else {
+      // Format en jours si moins de 30 jours
+      return "$days days";
+  }
+}
+
+
+
+?>
+
+<?php 
+
+$urlt = 'https://api.geckoterminal.com/api/v2/networks/eth/tokens/'. $parts[1] ;
+$responset = callExternalAPI($urlt);
+$arrayt = json_decode($responset, true);
+$tokadd= $arrayt['data'];
+
+$poolid = $tokadd['relationships']['top_pools']['data'][0]['id'];
+$pool = explode('_', $poolid)[1];
+
+
+
+
+
+?>
+
+
+
+
 
 <script>
 	
@@ -79,11 +144,105 @@ var counts = {
 }
 
 
+
+function formatNumber(num) {
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(2) + 'M';
+    } else if (num >= 1000) {
+        return (num / 1000).toFixed(2) + 'K';
+    } else {
+        return num.toString();
+    }
+}
 	
-	
-	
-	
+function updateWidths(greenWidth, redWidth, green, red) {
+    // Assurez-vous que la somme des largeurs ne dépasse pas 100%
+    var totalWidth = greenWidth + redWidth;
+    if (totalWidth > 100) {
+        console.error("La somme des largeurs ne doit pas dépasser 100%");
+        return;
+    }
+
+    // Mise à jour des largeurs
+    $('#'+green).css('width', greenWidth + '%');
+    $('#'+red).css('width', redWidth + '%');
+}
+
 $(document).ready(function(){
+
+ 
+
+
+
+
+function overviewtime(eth){
+  console.log('leth',eth);
+  $.ajax({
+    url: 'https://open-api.dextools.io/free/v2/pool/ether/'+eth+'/price',
+    method: 'GET',
+    headers: {
+        'X-BLOBR-KEY': 'iIiKdef28c4rhwBRBfkkgryNn3zXhVMB'
+    },
+    success: function(response) {
+
+      $('#5mtxs').append(Math.round(response.data.buys5m+response.data.sells5m));
+        $('#5mb').append(Math.round(response.data.buys5m));
+        $('#5ms').append(Math.round(response.data.sells5m));
+        response.data.volume5m ? $('#5mvol').append('$' + formatNumber(Math.round(response.data.volume5m))) :  $('#5mvol').append('-');
+        $('#5mvar').append(Math.round(response.data.variation5m) + '%');
+        response.data.buyVolume5m ?  $('#5mbuy').append('$' + formatNumber(Math.round(response.data.buyVolume5m) )):  $('#5mbuy').append('-');
+        response.data.sellVolume5m ?  $('#5msell').append('$' + formatNumber(Math.round(response.data.sellVolume5m) )):  $('#5msell').append('-');
+
+
+        updateWidths(20, 80, '5mbg', '5msr' ); 
+
+
+
+        $('#1htxs').append(Math.round(response.data.buys1h+response.data.sells1h));
+        $('#1hb').append(Math.round(response.data.buys1h));
+        $('#1hs').append(Math.round(response.data.sells1h));
+       $('#1hvol').append('$' + formatNumber(Math.round(response.data.volume1h)));
+        $('#1hvar').append(Math.round(response.data.variation1h) + '%');
+        $('#1hbuy').append('$' + formatNumber(Math.round(response.data.buyVolume1h) ));
+        $('#1hsell').append('$' + formatNumber(Math.round(response.data.sellVolume1h) ));
+var tot1h = Math.round(response.data.buys1h+response.data.sells1h);
+
+ updateWidths(Math.round(response.data.buys1h)/tot1h, Math.round(response.data.sells1h)/tot1h, '5mbg', '5msr' ); 
+
+        $('#6htxs').append(Math.round(response.data.buys6h+response.data.sells6h));
+        $('#6hb').append(Math.round(response.data.buys6h));
+        $('#6hs').append(Math.round(response.data.sells6h));
+       $('#6hvol').append('$' + formatNumber(Math.round(response.data.volume6h)));
+        $('#6hvar').append(Math.round(response.data.variation6h) + '%');
+         $('#6hbuy').append('$' + formatNumber(Math.round(response.data.buyVolume6h) ));
+        $('#6hsell').append('$' + formatNumber(Math.round(response.data.sellVolume6h) ));
+
+        var tot6h = Math.round(response.data.buys6h+response.data.sells6h);
+
+        console.log('calc',(response.data.buys6h/tot6h)*100, (response.data.sells6h/tot6h)*100 );
+
+
+        updateWidths((response.data.buys6h/tot6h)*100, (response.data.sells6h/tot6h)*100, '6hbg', '6hsr' ); 
+
+        $('#24htxs').append(Math.round(response.data.buys24h+response.data.sells24h));
+        $('#24hb').append(Math.round(response.data.buys24h));
+        $('#24hs').append(Math.round(response.data.sells24h));
+        response.data.volume24h ? $('#24hvol').append('$' + formatNumber(Math.round(response.data.volume24h))):  $('#24hvol').append('-');
+        $('#24hvar').append(Math.round(response.data.variation24h) + '%');
+        response.data.buyVolume24h ? $('#24hbuy').append('$' + formatNumber(Math.round(response.data.buyVolume24h) )) : $('#24hbuy').append('-');
+        response.data.sellVolume24h ? $('#24hsell').append('$' + formatNumber(Math.round(response.data.sellVolume24h) )) :  $('#24hsell').append('-');
+
+    },
+    error: function(xhr, status, error) {
+      console.log('la rekkpo');   console.error(error);
+    }
+});
+
+}
+
+
+
+
 	
 	$.ajax({
   url: 'https://api.geckoterminal.com/api/v2/networks/eth/new_pools?page=1',
@@ -110,7 +269,7 @@ $(document).ready(function(){
               </div>
             </span>
             <span class="${item.attributes.price_change_percentage.h24 > 0 ? 'green': 'red'}">${item.attributes.price_change_percentage.h24}%</span>
-            <span>${calculateDifferenceInMinutes(item.attributes.pool_created_at)} MIN</span>
+            <span>${calculateTimeDifference(item.attributes.pool_created_at)}</span>
             <span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
           </a>
         </li>
@@ -147,7 +306,7 @@ $(document).ready(function(){
                 </div>
               </span>
                 <span class="${item.attributes.price_change_percentage.h24 > 0 ? 'green': 'red'}">${item.attributes.price_change_percentage.h24}%</span>
-                <span>${calculateDifferenceInMinutes(item.attributes.pool_created_at)} MIN</span>
+                <span>${calculateTimeDifference(item.attributes.pool_created_at)}</span>
                 <span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
             </a>
           </li>
@@ -204,8 +363,8 @@ $(document).ready(function(){
 		   }
 	
 		
-		$('#liquidity').append('$'+Math.round(totalLiquidity)+'<i class="fa-solid fa-lock"><em><?= $latrad["Lock for"][$_SESSION['langue']] ?> 12 <?= $latrad["Months"][$_SESSION['langue']] ?></em></i>');	
-		$('#holders').append(items.result['<?= $parts[1] ?>'].holder_count);	
+		
+		//$('#holders').append(formatNumber(items.result['<?= $parts[1] ?>'].holder_count));	
 		$('#buytax').append(items.result['<?= $parts[1] ?>'].buy_tax);	
 		$('#selltax').append(items.result['<?= $parts[1] ?>'].sell_tax);	
 		
@@ -241,6 +400,8 @@ $(document).ready(function(){
     success: function(response) {
       var items = response.data;
   console.log(items.id);
+  consone.log('lesymbol ',symbol);
+
 	 $('#cryptonom').append(items.attributes.name);	
 	 $('#cryptosymbol').append(items.attributes.symbol);	
 	 $('#cryptopair').append('<?= $parts[0] ?>');	
@@ -249,7 +410,6 @@ $(document).ready(function(){
 			 $('#limage').attr("src", items.attributes.image_url);	
        var symbol = items.attributes.symbol;
        reloadTradingViewWidget("<?php echo $themeClass; ?>", symbol);
-
 		
 		if(items.attributes.websites[0]){
 		      $('#lienSite').attr('href', items.attributes.websites[0] );
@@ -294,8 +454,8 @@ $(document).ready(function(){
       var items = response.data;
   console.log(items.id);
 	 $('#cryptoprix').append("$"+items.attributes.price_usd);	
-    $('#supply').append("$"+items.attributes.fdv_usd);	
-		 $('#marketcap').append("$"+items.attributes.market_cap_usd );	
+    //$('#supply').append("$"+formatNumber(items.attributes.fdv_usd));	
+		 //$('#marketcap').append("$"+formatNumber(items.attributes.market_cap_usd) );	
 
 		
 		console.log('pools',items.relationships.top_pools.data[0].id);
@@ -318,6 +478,8 @@ $(document).ready(function(){
 
 	 $('#cryptosymboladd').append(truncateAddress(partie1[1]));	
 	$('#cryptopairadd').append(truncateAddress(partie2[1]));	
+
+
 		console.log('change1h',items.attributes.price_change_percentage);
 $('#1change').append(items.attributes.price_change_percentage.h1+"%");
 $('#24change').append(items.attributes.price_change_percentage.h24+"%");
@@ -383,6 +545,42 @@ console.log("Transactions Buy en 24h:", counts.buy['24h']);
   });
 		
 		
+  $.ajax({
+    url: 'https://api.geckoterminal.com/api/v2/networks/eth/tokens/<?= $parts[1] ?>/pools?page=1', // Remplacez par l'URL réelle de votre API
+      type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      var items = response.data;
+  console.log('ekkkkuh',items[0].attributes.address);
+	overviewtime(items[0].attributes.address);
+
+		
+	},
+    error: function() {
+    }
+  });
+
+
+  $.ajax({
+    url: 'https://open-api.dextools.io/free/v2/token/ether/<?= $parts[1] ?>/locks', // Remplacez par l'URL réelle de votre API
+      type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      var items = response.data;
+  console.log('uiooiuoiu',items.nextUnlock.unlockDate);
+
+
+  //$('#liquidity').append('$'+formatNumber(Math.round(items.amountLocked))+'<i class="fa-solid fa-lock"><em><?= $latrad["Lock for"][$_SESSION['langue']] ?> '+items.nextUnlock.unlockDate+' <?= $latrad["Months"][$_SESSION['langue']] ?></em></i>');	
+
+		
+	},
+    error: function() {
+    }
+  });
+
+
+
+
 		
 	},
     error: function() {
@@ -404,21 +602,40 @@ console.log("Transactions Buy en 24h:", counts.buy['24h']);
 	
 	
 	
-function calculateDifferenceInMinutes(dateString) {
-  // Créer un objet Date pour l'heure actuelle dans le fuseau horaire de la France
-  const now = new Date().toLocaleString('en-US', { timeZone: 'Europe/Paris' });
-  const nowDate = new Date(now);
+function calculateTimeDifference(dateString) {
+    // Créer un objet Date pour l'heure actuelle dans le fuseau horaire de la France
+    const now = new Date().toLocaleString('en-US', { timeZone: 'Europe/Paris' });
+    const nowDate = new Date(now);
 
-  // Créer un objet Date pour la date fournie convertie dans le fuseau horaire de la France
-  const then = new Date(dateString).toLocaleString('en-US', { timeZone: 'Europe/Paris' });
-  const thenDate = new Date(then);
+    // Créer un objet Date pour la date fournie convertie dans le fuseau horaire de la France
+    const then = new Date(dateString).toLocaleString('en-US', { timeZone: 'Europe/Paris' });
+    const thenDate = new Date(then);
 
-  // Calculer la différence en millisecondes
-  const differenceInMilliseconds = nowDate - thenDate;
+    // Calculer la différence en millisecondes
+    const differenceInMilliseconds = nowDate - thenDate;
 
-  // Convertir les millisecondes en minutes et retourner le résultat
-  return Math.floor(differenceInMilliseconds / 60000);
+    // Convertir les millisecondes en minutes
+    const differenceInMinutes = Math.floor(differenceInMilliseconds / 60000);
+
+    // Calculer la différence en heures et jours
+    const differenceInHours = Math.floor(differenceInMinutes / 60);
+    const differenceInDays = Math.floor(differenceInHours / 24);
+    const differenceInMonths = Math.floor(differenceInDays / 30);
+
+    // Retourner le résultat en minutes, heures, ou jours
+    if (differenceInMinutes < 60) {
+        return differenceInMinutes + ' minutes';
+    } else if (differenceInHours < 24) {
+        return differenceInHours + ' hours';
+    }else if (differenceInDays < 30) {
+        return differenceInDays + ' days';
+    } else {
+        return differenceInMonths + ' months';
+    }
 }
+
+// Exemple d'utilisation
+console.log(calculateTimeDifference('2023-12-18T11:05:00.000Z'));
 
 
 </script>
