@@ -59,9 +59,9 @@ BOT SIDE
 	
 <ul>
 <li><a href="/storm2/dashboard/"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-<li><a target="_blank"><i class="fa-brands fa-telegram"></i>Telegram Bot</a></li>
+<li><a target="_blank"><i class="fa-brands fa-telegram"></i> Telegram Bot</a></li>
 <li><a href="/storm2/bot/"><i class="fa-solid fa-robot"></i> Web Bot</a></li>
-<li><a id="toggleTheme" class="bot_side_circle"><i class="fa-solid fa-circle-half-stroke"></i>Dark/Light</a></li>
+<li><a id="toggleTheme" class="bot_side_circle"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i> Dark/Light</a></li>
 <li><a target="_blank"><i class="fa-solid fa-book"></i> Help</a></li>
 <li><a target="_blank"><i class="fa-brands fa-x-twitter"></i> Follow us</a></li>
 <li><a><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></li>

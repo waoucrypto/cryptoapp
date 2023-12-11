@@ -66,7 +66,7 @@ HEADER RIGHT
 <div class="dash_header_nav">
 <a target="_blank" class="dash_header_top_right_circle"><i class="fa-brands fa-x-twitter"></i></a>
 <a target="_blank" class="dash_header_top_right_circle"><i class="fa-solid fa-book"></i></a>
-<a id="toggleTheme" class="dash_header_top_right_circle"><i class="fa-solid fa-circle-half-stroke"></i></a>
+<a id="toggleTheme" class="dash_header_top_right_circle"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
 <a onClick="settings_open()" class="dash_header_top_right_circle"><i class="fa-solid fa-gear"></i></a>
 </div>
 </div>

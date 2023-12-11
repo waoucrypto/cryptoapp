@@ -56,6 +56,16 @@ $(document).ready(function(){
     $('#toggleTheme').click(function(){
         $('body').toggleClass('light');
         var theme = $('body').hasClass('light') ? 'light' : 'dark';
+
+        // Basculer les icônes
+        if(theme == 'light') {
+            $(this).find('.fa-moon').show();
+            $(this).find('.fa-sun').hide();
+        } else {
+            $(this).find('.fa-sun').show();
+            $(this).find('.fa-moon').hide();
+        }
+
         $.ajax({
             url: '/storm2/toggle_theme.php',
             type: 'POST',
@@ -66,5 +76,15 @@ $(document).ready(function(){
         });
         reloadTradingViewWidget(theme);
     });
+
+    // Initialiser les icônes en fonction du thème actuel
+    var initialTheme = $('body').hasClass('light') ? 'light' : 'dark';
+    if(initialTheme == 'light') {
+        $('#toggleTheme').find('.fa-moon').show();
+        $('#toggleTheme').find('.fa-sun').hide();
+    } else {
+        $('#toggleTheme').find('.fa-sun').show();
+        $('#toggleTheme').find('.fa-moon').hide();
+    }
 });
 </script>
