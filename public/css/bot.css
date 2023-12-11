@@ -185,11 +185,10 @@ MODULES
 /*
 BOT TOKEN
 */
-.bot_token_ico {display:flex;width:100%;align-items:center;padding:10px 10px 0px 10px;}
-.bot_token_ico img {display:flex;height:30px;width:30px;object-fit:cover;object-position:center center;border-radius:50%;margin:0 10px 0 0;}
-.bot_token_ico em {display:flex;flex-direction:column;flex-shrink:0;line-height:1;}
-.bot_token_ico em u:nth-child(1) {display:flex;font-size:13px;flex-shrink:0;font-weight:500;text-decoration:none;}
-.bot_token_ico em u:nth-child(2) {display:none;font-size:10px;margin-top:5px;flex-shrink:0;color:var(--color-text2);letter-spacing:0.5px;text-decoration:none;}
+.bot_token_ico {display:flex;width:100%;align-items:center;justify-content:space-between;padding:10px 10px 0px 10px;}
+.bot_token_ico span {display:flex;align-items:center;font-size:13px;font-weight:500;}
+.bot_token_ico span img {display:flex;height:30px;width:30px;object-fit:cover;object-position:center center;border-radius:50%;margin:0 10px 0 0;}
+.bot_token_ico b {font-size:22px;font-weight:600;margin-right:3px;}
 
 .bot_token1 {display:flex;width:100%;margin-top:15px;flex-direction:column;}
 .bot_token2 {display:flex;width:100%;justify-content:space-between;align-items:stretch;}

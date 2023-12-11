@@ -15,22 +15,16 @@ $PEPE
     
 <div class="bot_token3">
 <div class="bot_token_ico"> 
-<img src="/images/pepe.jpg">
-<em>
-<u>PEPE</u>
-<u>PEPE / ETH</u>
-</em>
+<span><img src="/images/pepe.jpg">PEPE</span>
+<b>$0.00000113</b>
 </div>
 <?php include '../dashboard/dash-buy.php' ;?>
 </div>
 
 <div class="bot_token4">
 <div class="bot_token_ico"> 
-<img src="/images/pepe.jpg">
-<em>
-<u>PEPE</u>
-<u>PEPE / ETH</u>
-</em>
+<span><img src="/images/pepe.jpg">PEPE</span>
+<b>$0.00000113</b>
 </div>
 <?php include '../dashboard/dash-overview.php' ;?>
 </div>
