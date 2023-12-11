@@ -70,6 +70,11 @@ OVERVIEW
 <li><span>Holders</span><span>143.92K</span></li>
 <li><span>Txs</span><span>1.72M</span></li>
 <li><span>Tax</span><span><b>B</b> <em>0%</em><u></u><b>S</b> <em>0%</em></span></li>	
+
+<li><span>Honeypot</span><span>No</span></li>
+<li><span>Renounced</span><span>Yes</span></li>
+<li><span>Contract</span><span>0x698...1933</span></li>
+<li><span>Pool</span><span>0x1195...7b58</span></li>
 </ul>
 
 </div>

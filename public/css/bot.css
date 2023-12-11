@@ -173,6 +173,7 @@ MODULES
 .dash_performance {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:50%;position:relative;margin-top:15px;}
 .bot_token {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:100%;position:relative;margin-top:0;}
 .dash_buysell {width:100%;border:none;}
+.bot_token4 {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:100%;position:relative;margin-top:0;}
 
 .bot_token3 {border-radius:10px;overflow:hidden;border:1px solid var(--color-border);width:49.5%;position:relative;margin-top:0;}
 
@@ -217,10 +218,15 @@ BOT TOKEN
 .bot_token2 .bot_token ul quote {display:flex;width:90%;flex-direction:column;margin:5px 0 5px 5%;}
 .bot_token2 .bot_token ul quote:nth-child(2n) {background:var(--color-bloc2);}
 
+.bot_token2 .bot_token4 {width:49.5%;}
+.bot_token2 .bot_token4 .bot_token_ico {display:none;}
+.bot_token2 .dash_buysell ul li {height:50px;}
+
+.dash_overview ul li {height:50px;}
+.dash_overview strong {display:none;}
+.dash_overview ul div {height:110px;}
 
 
-
-.bot .dash_overview {width:49.5%;}
 .bot .dash_chart {width:100%;aspect-ratio:2/1;margin-bottom:8px;}
 
 
@@ -351,6 +357,9 @@ body {background:var(--color-bloc);}
 
 .bot_token2 .dash_buysell ul {height:100%;}
 .bot_token3 .bot_token_ico {display:none;}
+
+.bot_token2 .bot_token4 {width:100%;}
+.bot_token2 .bot_token4 .bot_token_ico {display:flex;margin-bottom:-5px;}
 
 .bot {position:relative;}
 .bot_left {position:fixed;}
