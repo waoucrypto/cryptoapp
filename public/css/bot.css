@@ -197,12 +197,14 @@ BOT TOKEN
 .bot_token2 .bot_token3 .dash_buysell ul li:nth-child(1) {margin-top:0;}
 .bot_token2 .bot_token4 .bot_token_ico {display:none;}
 .bot_token2 .bot_token4 .dash_overview ul li {height:50px;}
+.bot_token2 .bot_token4 .dash_overview ul li span:nth-child(2) {margin-top:7px;}
 .bot_token2 .bot_token4 .dash_overview ul li:nth-last-child(1) {display:flex;}
 .bot_token2 .bot_token4 .dash_overview ul li:nth-last-child(2) {display:flex;}
 .bot_token2 .bot_token4 .dash_overview ul li:nth-last-child(3) {display:flex;}
 .bot_token2 .bot_token4 .dash_overview ul li:nth-last-child(4) {display:flex;}
 .bot_token2 .bot_token4 .dash_overview strong {display:none;}
 .bot_token2 .bot_token4 .dash_overview ul div {height:110px;}
+
 
 .bot .dash_chart {width:100%;aspect-ratio:2/1;margin-bottom:8px;}
 
