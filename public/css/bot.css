@@ -325,8 +325,7 @@ body {background:var(--color-bloc);}
 .bot_token2 {flex-direction:column;justify-content:flex-start;align-items:flex-start;}
 .bot_token2 .bot_token3 {width:100%;order:2;}
 .bot_token2 .bot_token3 .bot_token_ico {display:none;}
-.bot_token2 .bot_token3 .dash_buysell ul {height:100%;}
-.bot_token2 .bot_token3 .dash_buysell ul li {height:50px;}
+.bot_token2 .bot_token3 .dash_buysell ul {height:350px;}
 .bot_token2 .bot_token4 {width:100%;order:1;margin-bottom:10px;}
 .bot_token2 .bot_token4 .bot_token_ico {display:flex;margin-bottom:-5px;}
 
