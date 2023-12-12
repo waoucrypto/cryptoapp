@@ -203,8 +203,8 @@ $(document).ready(function() {
 		{ selector: '.bot_empty #performance', loadFile: 'bot-performance.php' },
 		{ selector: '.bot_empty #portfolio', loadFile: 'bot-portfolio.php' },
 
-		{ selector: '.dash_list_nav #buy', loadFile: 'bot-buy.php' },
-		{ selector: '.dash_list_nav #profit', loadFile: 'bot-profit1.php' },
+		{ selector: '.dash_list #profit2', loadFile: 'bot-profit1.php' },
+		{ selector: '.bot .bot_message a#buy', loadFile: 'bot-buy.php' },
 
 		{ selector: '.search_bloc ul li#token', loadFile: 'bot-buy.php' },
 		{ selector: '.dash_latest ul li#token', loadFile: 'bot-buy.php' },

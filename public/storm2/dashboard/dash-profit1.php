@@ -28,19 +28,12 @@ PORTFOLIO
 </li>
 
 <?php for ($i = 0; $i < 10; $i++): ?>
-<li id="token">
+<li id="profit2">
 <a>
 <span><img src="/images/otsea.png"><div><b>Otsea</b><em>OTSEA / ETH</em></div></span>
 <span class="green">+20%</span>
 <span>2 ETH</span>
-<span class="dash_list_nav0">
-<i class="fa-solid fa-ellipsis"></i>
-<div class="dash_list_nav">
-<div id="buy">Buy, Sell, Snipe <i class="fa-solid fa-bullseye"></i></div>
-<div id="profit">Profit <i class="fa-solid fa-circle-notch"></i></div>
-<div>Share <i class="fa-brands fa-x-twitter"></i></div>
-</div>
-</span>
+<span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-plus"></i></span>
 </a>
 </li>
 <?php endfor; ?>

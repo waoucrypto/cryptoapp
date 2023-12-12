@@ -3,7 +3,7 @@
 BOT MESSAGE
 -->
 <div class="bot_message">
-$PEPE
+Overview of key figures for $PEPE and the Storm bot to buy, sell, or snipe it.
 </div>
 
 
