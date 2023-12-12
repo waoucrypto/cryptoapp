@@ -201,7 +201,7 @@ $(document).ready(function() {
 		{ selector: '.bot_empty #wallet', loadFile: 'bot-wallet.php' },
 		{ selector: '.bot_empty #profit', loadFile: 'bot-profit.php' },
 		{ selector: '.bot_empty #performance', loadFile: 'bot-performance.php' },
-		{ selector: '.bot_empty #portfolio', loadFile: 'bot-portfolio.php' },
+		{ selector: '.bot_empty #portfolio', loadFile: 'bot-portfolio1.php' },
 
 		{ selector: '.search_bloc ul li#token', loadFile: 'bot-buy.php' },
 		{ selector: '.dash_latest ul li#token', loadFile: 'bot-buy.php' },
