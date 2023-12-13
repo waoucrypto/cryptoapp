@@ -11,7 +11,7 @@ BOT
 .bot {position:relative;top:0;left:0;right:0;bottom:0;background:var(--color-bot-right);color:var(--color-text);}
 .bot_left {display:flex;width:260px;position:fixed;top:0;left:0;bottom:0;z-index:10;flex-direction:column;background:var(--color-bloc);border-right:1px solid var(--color-border);}
 .bot_bottom {position:fixed;left:260px;right:0;bottom:0;height:100px;z-index:10;background:var(--color-bot-right);z-index:10;display:flex;justify-content:center;align-items:flex-start;}
-.bot_center {position:relative;display:flex;justify-content:center;align-items:flex-start;padding-right:0;width:100%;padding:0 0 150px 260px;}
+.bot_center {position:relative;display:flex;justify-content:center;align-items:flex-start;padding-right:0;width:100%;padding:0 0 120px 260px;}
 .bot_center2 {display:flex;width:700px;flex-direction:column;padding:50px 0 0 0;}
 .bot_empty {position:fixed;left:260px;right:0;bottom:100px;top:0;display:flex;justify-content:center;align-items:flex-start;z-index:5;}
 .bot_empty0 {display:flex;width:700px;height:100%;flex-direction:column;}
