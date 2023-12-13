@@ -192,55 +192,17 @@ WALLET MY
 BUY
 -->
 <div class="dash_settings" id="settings_buy">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["Buy Settings"][$_SESSION['langue']] ?></div>
 <form>
-<li><label><?= $latrad["Buy GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy1()"></li>
-<li><label><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy2()"></li>
-<li><label><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy3()"></li>
-<li><label><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy4()"></li>
-<li><label><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy5()"></li>
-<li><label><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy6()"></li>
-<li><label><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy7()"></li>
-<li><label><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="buy8()"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></li>
-<li>
-<span id="buy1">
-<b><?= $latrad["Buy GWEI"][$_SESSION['langue']] ?></b>
-<p>Set the additional GWEI you're willing to use for buying the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy2">
-<b><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></b>
-<p>Determine the extra GWEI you're willing to use to expedite token approval following your purchase. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy3">
-<b><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy4">
-<b><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy5">
-<b><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the buy tax of the selected token is at or lower than the set limit. Example: Your buy tax limit is set at 80%. If XYZ token launches with a 99 buy tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the buy tax to 75%, Storm will fire in the same block as the tax change.
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire</p>
-</span>
-<span id="buy6">
-<b><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the sell tax of the selected token is at or lower than the set limit. Example: Your sell tax limit is set at 80%. If XYZ token launches with a 99 sell tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the sell tax to 75%, Storm will fire in the same block as the tax change. 
-<br><br>Note:
-<br>-Both buy tax and sell tax limits must be met for Storm to fire.</p>
-</span>
-<span id="buy7">
-<b><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or higher than the amount set by the user. The limit is based on USD value.</p>
-</span>
-<span id="buy8">
-<b><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or lower than the amount set by the user. The limit is based on USD value.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
 </form>
 </div>
 
@@ -249,31 +211,13 @@ BUY
 SELL
 -->
 <div class="dash_settings" id="settings_sell">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["Sell Settings"][$_SESSION['langue']] ?></div>
 <form>
-<li><label><?= $latrad["Max Sell Tax"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="sell1()"></li>
-<li><label><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="sell2()"></li>
-<li><label><?= $latrad["Sell Rug GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="sell3()"></li>
-<li><label><?= $latrad["Min Liquidity Value"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="sell4()"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></li>
-<li>
-<span id="sell1">
-<b><?= $latrad["Max Sell Tax"][$_SESSION['langue']] ?></b>
-<p>If developer changes the sell tax above your set limit, Storm will try and frontrun the tax change transaction.</p>
-</span>
-<span id="sell2">
-<b><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="sell3">
-<b><?= $latrad["Sell Rug GWEI"][$_SESSION['langue']] ?></b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="sell4">
-<b><?= $latrad["Min Liquidity Value"][$_SESSION['langue']] ?></b>
-<p>If the paired liquidity falls to or lower than the amount the user set up, Storm will initiate a sell. The limit is based on USD value.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Sell Tax"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Rug GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Value"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
 </form>
 </div>
 
@@ -282,71 +226,19 @@ SELL
 SNIPE
 -->
 <div class="dash_settings" id="settings_snipe">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad[""][$_SESSION['langue']] ?>Snipe Settings</div>
 <form>
-<li><label><?= $latrad["Snipe Amount"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe1()"></li>
-<li><label><?= $latrad["Snipe Tip"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe2()"></li>
-<li><label><?= $latrad["Backup Tip"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe3()"></li>
-<li><label><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe4()"></li>
-<li><label><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe5()"></li>
-<li><label><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe6()"></li>
-<li><label><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe7()"></li>
-<li><label><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe8()"></li>
-<li><label><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe9()"></li>
-<li><label><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="snipe10()"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></li>
-<li>
-<span id="snipe1">
-<b><?= $latrad["Snipe Amount"][$_SESSION['langue']] ?></b>
-<p>This is the MaxSpend amount that you allow the bot to use for purchasing the MaxTransaction amount of the token. If the MaxTransaction value is lower than your MaxSpend, any remaining ETH will be returned to your wallet. If the MaxTransaction is higher than your MaxSpend, it will purchase as many tokens as possible for the MaxSpend value (unless you've set up slippage).</p>
-</span>
-<span id="snipe2">
-<b><?= $latrad["Snipe Tip"][$_SESSION['langue']] ?></b>
-<p>Specify the additional ETH you're willing to pay as a bribe to the block builder to get ahead of other snipers. This applies only to unlaunched tokens you plan to snipe.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="snipe3">
-<b><?= $latrad["Backup Tip"][$_SESSION['langue']] ?></b>
-<p>FoF does not fire on MEV launches or Deadblock launches, However, if you have Backup enabled, it will trigger using the Backup Tip in these cases, instead of the Snipe Tip.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="snipe4">
-<b><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></b>
-<p>Determine the extra GWEI you're willing to use to expedite token approval following your purchase. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="snipe5">
-<b><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="snipe6">
-<b><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="snipe7">
-<b><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the buy tax of the selected token is at or lower than the set limit. Example: Your buy tax limit is set at 80%. If XYZ token launches with a 99 buy tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the buy tax to 75%, Storm will fire in the same block as the tax change.
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire</p>
-</span>
-<span id="snipe8">
-<b><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the sell tax of the selected token is at or lower than the set limit. Example: Your sell tax limit is set at 80%. If XYZ token launches with a 99 sell tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the sell tax to 75%, Storm will fire in the same block as the tax change. 
-<br>
-<br>Note:<br>-Both buy tax and sell tax limits must be met for Storm to fire.</p>
-</span>
-<span id="snipe9">
-<b><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or higher than the amount set by the user. The limit is based on USD value.</p>
-</span>
-<span id="snipe10">
-<b><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or lower than the amount set by the user. The limit is based on USD value.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Snipe Amount"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Snipe Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Backup Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
 </form>
 </div>
 
@@ -355,47 +247,15 @@ SNIPE
 GAS
 -->
 <div class="dash_settings" id="settings_gas">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad[""][$_SESSION['langue']] ?>Gas Settings</div>
 <form>
-<li><label><?= $latrad["Auto Snipe Tip"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="gas1()"></li>
-<li><label><?= $latrad["First Bundle Backup Tip"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="gas2()"></li>
-<li><label><?= $latrad["Buy GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="gas3()"></li>
-<li><label><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="gas4()"></li>
-<li><label><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="gas5()"></li>
-<li><label><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="gas6()"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></li>
-<li>
-<span id="gas1">
-<b><?= $latrad["Auto Snipe Tip"][$_SESSION['langue']] ?></b>
-<p>Specify the additional ETH you're willing to pay as a bribe to the block builder to get ahead of other snipers. This applies only to unlaunched tokens you plan to snipe.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="gas2">
-<b><?= $latrad["First Bundle Backup Tip"][$_SESSION['langue']] ?></b>
-<p>FoF does not fire on MEV launches or Deadblock launches, However, if you have Backup enabled, it will trigger using the Backup Tip in these cases, instead of the Snipe Tip.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="gas3">
-<b><?= $latrad["Buy GWEI"][$_SESSION['langue']] ?></b>
-<p>Set the additional GWEI you're willing to use for buying the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="gas4">
-<b><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></b>
-<p>Determine the extra GWEI you're willing to use to expedite token approval following your purchase. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="gas5">
-<b><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="gas6">
-<b><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Auto Snipe Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["First Bundle Backup Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
 </form>
 </div>
 
@@ -404,51 +264,14 @@ GAS
 TOGGLE
 -->
 <div class="dash_settings" id="settings_toggle">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad[""][$_SESSION['langue']] ?>Toggle Settings</div>
 <form>
-<li class="w100"><label><?= $latrad["Anti-Rug"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="toggle1()"></li>
-<li><label><?= $latrad["First Bundle or Fail"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="toggle2()"></li>
-<li><label><?= $latrad["First Bundle Backup"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="toggle3()"></li>
-<li><label><?= $latrad["Transfer on Blacklist"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="toggle4()"></li>
-<li><label><?= $latrad["MaxTX or Revert"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="toggle5()"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></li>
-<li>
-<span id="toggle1">
-<b><?= $latrad["Anti-Rug"][$_SESSION['langue']] ?></b>
-<p>If it's green, it's toggled on. If you wish to snipe without anti-rug, you can turn it off. If the tax goes above your safety tax settings or the developer tries to rug the token (any instance that makes investors unable to sell), Storm will attempt to frontrun the transaction and sell your tokens.
-<br><br>Note:
-<br>- Developers often "shake out" bot users with fake tax settings. If you have anti-rug on, it will trigger.
-<br>- It has an 80-85% success rate, and can only land on MEV blocks.</p>
-</span>
-<span id="toggle2">
-<b><?= $latrad["First Bundle or Fail"][$_SESSION['langue']] ?>l</b>
-<p>If its green, it is toggled on. If you wish to snipe without First Bundle or Fail on, you can turn it off. When enabled, Storm will always aim for the first buy when trading begins. It can only land on block 0 as the first bundle. It is recommended to have at least 10 participating wallets for this to work effectively.
-<br><br>Note: 
-<br>- The more wallets participate in the First Bundle or Fail, the higher the chance of winning the first buy!
-<br>- This feature does not work on MEV launches and Deadblock launches.</p>
-</span>
-<span id="toggle3">
-<b><?= $latrad["First Bundle Backup"][$_SESSION['langue']] ?></b>
-<p>If it's green, it's toggled on. If you wish to snipe without First Bundle or Fail Backup, you can turn it off. FoF does not trigger on MEV launches or Deadblock launches, but if you have Backup enabled, it will trigger. On MEV launches, it will buy on block 1, and on Deadblock launches, it will buy on the first safe block. In this case, it will use your Backup Miner Tip.
-<br><br>Note:
-<br>- It will use the FoF Backup Miner Tip, not the Auto Sniper Miner Tip!</p>
-</span>
-<span id="toggle4">
-<b><?= $latrad["Transfer on Blacklist"][$_SESSION['langue']] ?></b>
-<p>If its green, it is toggled on. If you wish to snipe without Transfer on Blacklist on, you can turn it off. If the developer tries to blacklist your wallet, Storm will call the Transfer on Blacklist function to send your tokens to the 'transfer wallet' as long as it is enabled.
-<br><br>Note:
-<br>- You must have transfer wallets set up in Storm for it to work.
-<br>- Your transfer wallets must have at least 0.1 ETH for it to work.</p>
-</span>
-<span id="toggle5">
-<b><?= $latrad["MaxTX or Revert"][$_SESSION['langue']] ?></b>
-<p>If you have this feature enabled, you can limit your risk tolerance and only allow the bot to buy if the maximum transaction does not exceed your MaxSpend amount. If a token does not have a maximum transaction set up, this feature is ignored.
-Example: The MaxTx of the token is 2%, and you set your maximum spend at 0.1 ETH. If 2% is worth more than 0.1 ETH at the time of your buy, then your transaction will revert.
-<br><br>Note:
-<br>- If you revert due to this setting, it will cost you the base GWEI, but you will not lose your tip.
-<br>- Tax applies post-execution.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Anti-Rug"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["First Bundle or Fail"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["First Bundle Backup"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Transfer on Blacklist"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["MaxTX or Revert"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
 </form>
 </div>
 
