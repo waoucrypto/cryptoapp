@@ -192,10 +192,10 @@ SELL
 <div class="dash_settings" id="settings_sell">
 <form>
 <ul class="dash_settings_ul">
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Sell Tax"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Rug GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Value"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Sell Tax"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Rug GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Value"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
 </ul>
 </form>
 </div>
