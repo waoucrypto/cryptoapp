@@ -459,40 +459,11 @@ SAFETY
 <div class="dash_settings" id="settings_safety">
 <div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad[""][$_SESSION['langue']] ?>Safety Settings</div>
 <form>
-<li><label><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="safety1()"></li>
-<li><label><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="safety2()"></li>
-<li class="w100"><label><?= $latrad["Slippage"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="safety3()"></li>
-<li><label><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="safety4()"></li>
-<li><label><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH" onClick="safety5()"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></li>
-<li>
-<span id="safety1">
-<b><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the buy tax of the selected token is at or lower than the set limit. Example: Your buy tax limit is set at 80%. If XYZ token launches with a 99 buy tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the buy tax to 75%, Storm will fire in the same block as the tax change.
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire</p>
-</span>
-<span id="safety2">
-<b><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the sell tax of the selected token is at or lower than the set limit. Example: Your sell tax limit is set at 80%. If XYZ token launches with a 99 sell tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the sell tax to 75%, Storm will fire in the same block as the tax change. 
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire.</p>
-</span>
-<span id="safety3">
-<b><?= $latrad["Slippage"][$_SESSION['langue']] ?></b>
-<p>Normal 0-99% range. It will allow that much movement in the price or the sell times out. It is important to consider the size of your trade, the volatility of the market, and the depth of the liquidity pool. Make sure to also set a slippage tolerance that is appropriate for your risk tolerance.
-<br><br>Note:
-<br>- If you set it to 100, it will be considered "unlimited".</p>
-</span>
-<span id="safety4">
-<b><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or higher than the amount set by the user. The limit is based on USD value.</p>
-</span>
-<span id="safety5">
-<b><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or lower than the amount set by the user. The limit is based on USD value.</p>
-</span>
-</li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Slippage"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
 </form>
 </div>
 
