@@ -1,8 +1,4 @@
-
-
-
 <meta charset="utf-8">
-
 
 <div class="settings_bloc">
 <div class="settings_bloc_title">Settings <i class="fa-solid fa-xmark" onClick="settings_close()"></i></div>
@@ -20,19 +16,16 @@ WALLET
 WALLET
 -->
 <div class="dash_wallet1" id="dash_wallet1">
-
 <ul>
 <li><b>General</b></li>
 <li id="settings_menu_preference" class="on"><a onClick="wallet_preference()"><i class="fa-solid fa-gears"></i> Preference</a></li>
 </ul>
-
 <ul>
 <li><b>Wallets</b></li>
 <li id="settings_menu_wallet_create"><a onClick="wallet_create()"><i class="fa-solid fa-plus"></i> Create Wallet</a></li>
 <li id="settings_menu_wallet_import"><a onClick="wallet_import()"><i class="fa-solid fa-upload"></i> Import Wallet</a></li>
 <li id="settings_menu_wallet_my"><a onClick="wallet_my()"><i class="fa-solid fa-wallet"></i> My Wallets</a></li>
 </ul>
-
 <ul>
 <li><b>Settings</b></li>
 <li id="settings_menu_settings_buy"><a onClick="settings_buy()"><i class="fa-solid fa-coins"></i> Buy</a></li>
@@ -42,7 +35,6 @@ WALLET
 <li id="settings_menu_settings_toggle"><a onClick="settings_toggle()"><i class="fa-solid fa-sliders"></i> Toggle</a></li>
 <li id="settings_menu_settings_safety"><a onClick="settings_safety()"><i class="fa-solid fa-lock"></i> Safety</a></li>
 </ul>
-
 </div>
 
 
@@ -169,6 +161,7 @@ BUY
 -->
 <div class="dash_settings" id="settings_buy">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Buy Settings</div>
 <ul class="dash_settings_ul">
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Buy GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Approve GWEI </label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
@@ -188,6 +181,7 @@ SELL
 -->
 <div class="dash_settings" id="settings_sell">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Sell Settings</div>
 <ul class="dash_settings_ul">
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Max Sell Tax</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
@@ -203,6 +197,7 @@ SNIPE
 -->
 <div class="dash_settings" id="settings_snipe">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Snipe Settings</div>
 <ul class="dash_settings_ul">
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Snipe Amount</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Snipe Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
@@ -224,6 +219,7 @@ GAS
 -->
 <div class="dash_settings" id="settings_gas">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Gas Settings</div>
 <ul class="dash_settings_ul">
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Auto Snipe Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>First Bundle Backup Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
@@ -241,6 +237,7 @@ TOGGLE
 -->
 <div class="dash_settings" id="settings_toggle">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Toggle Settings</div>
 <ul class="dash_settings_ul">
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Anti-Rug</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>First Bundle or Fail</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
@@ -257,6 +254,7 @@ SAFETY
 -->
 <div class="dash_settings" id="settings_safety">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Safety Settings</div>
 <ul class="dash_settings_ul">
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Buy Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
@@ -302,56 +300,6 @@ $(document).mouseup(function(e) {
 
 function submitno(event) {event.preventDefault();}
 
-function closeAllGas() {
-$('#gas1').hide();
-$('#gas2').hide();
-$('#gas3').hide();
-$('#gas4').hide();
-$('#gas5').hide();
-$('#gas6').hide();
-}
-function closeAllToggle() {
-$('#toggle1').hide();
-$('#toggle2').hide();
-$('#toggle3').hide();
-$('#toggle4').hide();
-$('#toggle5').hide();
-}
-function closeAllSafety() {
-$('#safety1').hide();
-$('#safety2').hide();
-$('#safety3').hide();
-$('#safety4').hide();
-$('#safety5').hide();
-}
-function closeAllBuy() {
-$('#buy1').hide();
-$('#buy2').hide();
-$('#buy3').hide();
-$('#buy4').hide();
-$('#buy5').hide();
-$('#buy6').hide();
-$('#buy7').hide();
-$('#buy8').hide();
-}
-function closeAllSell() {
-$('#sell1').hide();
-$('#sell2').hide();
-$('#sell3').hide();
-$('#sell4').hide();
-}
-function closeAllSnipe() {
-$('#snipe1').hide();
-$('#snipe2').hide();
-$('#snipe3').hide();
-$('#snipe4').hide();
-$('#snipe5').hide();
-$('#snipe6').hide();
-$('#snipe7').hide();
-$('#snipe8').hide();
-$('#snipe9').hide();
-$('#snipe10').hide();
-}
 
 function wallet_preference(){
 $('.dash_settings').css('display', 'none');
@@ -416,7 +364,7 @@ $('.dash_settings').css('display', 'none');
 $('#settings_gas').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_gas').addClass('on');
-closeAllGas();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 $('#gas1').show();
 }
 
@@ -425,7 +373,7 @@ $('.dash_settings').css('display', 'none');
 $('#settings_toggle').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_toggle').addClass('on');
-closeAllToggle();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 $('#toggle1').show();
 }
 
@@ -434,7 +382,7 @@ $('.dash_settings').css('display', 'none');
 $('#settings_safety').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_safety').addClass('on');
-closeAllSafety();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 $('#safety1').show();
 }
 
@@ -443,7 +391,7 @@ $('.dash_settings').css('display', 'none');
 $('#settings_buy').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_buy').addClass('on');
-closeAllBuy();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 $('#buy1').show();
 }
 
@@ -452,7 +400,7 @@ $('.dash_settings').css('display', 'none');
 $('#settings_sell').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_sell').addClass('on');
-closeAllSell();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 $('#sell1').show();
 }
 
@@ -461,7 +409,7 @@ $('.dash_settings').css('display', 'none');
 $('#settings_snipe').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_snipe').addClass('on');
-closeAllSnipe();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 $('#snipe1').show();
 }
 

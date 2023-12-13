@@ -250,7 +250,7 @@ WIREFRAME
 
 
 /*
-WALLET
+SETTINGS
 */
 .settings_bloc {display:flex;width:100%;z-index:100;background:var(--color-bloc);position:relative;flex-direction:column;border-radius:10px;border:1px solid var(--color-border);}
 .settings_bloc .settings_bloc_title {display:flex;height:75px;width:100%;justify-content:space-between;align-items:center;font-size:16px;padding:0 25px 0 25px;border-bottom:1px solid var(--color-border);flex-shrink:0;}
@@ -300,7 +300,8 @@ WALLET
 .dash_settings form .dash_preference div u {display:flex;align-items:center;flex-direction:row;justify-content:flex-end;height:30px;font-weight:normal;border-radius:5px;justify-content:flex-end;align-items:center;padding:0 10px 0 10px;cursor:pointer;color:var(--color-text);background:var(--color-storm);text-decoration:none;color:#fff;}
 .dash_settings form .dash_preference div u a {color:#fff;}
 .dash_settings form .dash_preference div:nth-last-child(1) {border:none;}
-.dash_settings form .dash_settings_title {display:flex;font-size:14px;margin-bottom:10px;font-weight:600;}
+.dash_settings form .dash_settings_title {display:flex;font-size:14px;margin-bottom:10px;font-weight:600;align-items:center;}
+.dash_settings form .dash_settings_title i {margin-right:10px;}
 .dash_settings form li.dash_settings_confirmation {display:block;width:100%;font-size:12px;}
 .dash_settings form li.dash_settings_confirmation b {font-weight:500;font-size:14px;}
 .dash_settings form li.dash_settings_confirmation p {display:block;margin-top:15px;}
@@ -321,7 +322,6 @@ WALLET
 .dash_settings form li.dash_settings_wallets div:nth-child(3) a:nth-last-child(1) {margin-right:0;}
 .dash_settings form li.w100b {width:100%;flex-direction:row;justify-content:space-between;padding-bottom:25px;}
 
-
 /*
 SEARCH
 */
@@ -333,7 +333,7 @@ SEARCH
 /*
 SETTINGS
 */
-.settings {display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;justify-content:center;align-items:center;}
+.settings {display:flex;position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;justify-content:center;align-items:center;}
 .settings_background {position:fixed;top:0;left:0;right:0;bottom:0;background:var(--color-background-popup-search);display:flex;opacity:0;}
 .settings .settings_bloc {width:700px;box-shadow:var(--color-shadow2);background:var(--color-bloc);border:1px solid var(--color-border);height:560px;}
 .settings .settings_bloc .settings_bloc_title i {display:flex;font-size:14px;cursor:pointer;}
