@@ -54,7 +54,7 @@ SETTINGS
 <!--
 WALLET CREATE
 -->
-<div class="dash_settings" id="wallet_preference" style="display:flexoverflow:visible;">
+<div class="dash_settings" id="wallet_preference" style="display:flex;overflow:visible;">
 <form>
 
 <div class="dash_preference">
