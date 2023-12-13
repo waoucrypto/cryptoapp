@@ -163,27 +163,6 @@ WALLET MY
 <div>0x4b8e8b3f634e3a2f1b3c4d5e6f60718293a4b7h</div>
 <div><a class="on"><?= $latrad["Default wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Sniper wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Buy, Sell wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a></div>
 </li>
-<li class="dash_settings_wallets">
-<div><u><i class="fa-solid fa-pen-to-square"></i> <?= $latrad["Wallet"][$_SESSION['langue']] ?> 2: 1.5 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
-<div>0x4b8e8b3f634e3a2f1b3c4d5e6f60718293a4b0p</div>
-<div><a><?= $latrad["Default wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a class="on"><?= $latrad["Sniper wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Buy, Sell wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a></div>
-</li>
-<li class="dash_settings_wallets">
-<div><u><i class="fa-solid fa-pen-to-square"></i> <?= $latrad["Wallet"][$_SESSION['langue']] ?> 3: 1.67 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
-<div>0x4b8e8b3f634e3a2f1b3c4d5e6f60718293a4b3v</div>
-<div><a class="on"><?= $latrad["Default wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a class="on"><?= $latrad["Sniper wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Buy, Sell wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a></div>
-</li>
-<li class="dash_settings_wallets">
-<div><u><i class="fa-solid fa-pen-to-square"></i> <?= $latrad["Wallet"][$_SESSION['langue']] ?> 4: 0.2 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
-<div>0x4b8e8b3f634e3a2f1b3c4d5e6f60718293a4b9a</div>
-<div><a class="on"><?= $latrad["Default wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Sniper wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Buy, Sell wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a></div>
-</li>
-<li class="dash_settings_wallets">
-<div><u><i class="fa-solid fa-pen-to-square"></i> <?= $latrad["Wallet"][$_SESSION['langue']] ?> 5: 122 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
-<div>0x4b8e8b3f634e3a2f1b3c4d5e6f60718293a4b88</div>
-<div><a><?= $latrad["Default wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Sniper wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a class="on"><?= $latrad["Buy, Sell wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a></div>
-</li>
-
 <li>
 </form>
 </div>
@@ -207,6 +186,92 @@ BUY
 </div>
 
 
+<!--
+SELL
+-->
+<div class="dash_settings" id="settings_sell">
+<form>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Sell Tax"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Rug GWEI"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Value"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
+</form>
+</div>
+
+
+
+<!--
+SNIPE
+-->
+<div class="dash_settings" id="settings_snipe">
+<form>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Snipe Amount"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Snipe Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Backup Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
+</form>
+</div>
+
+
+
+
+<!--
+GAS
+-->
+<div class="dash_settings" id="settings_gas">
+<form>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Auto Snipe Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["First Bundle Backup Tip"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Approve GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Anti-Rug GWEI"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
+</form>
+</div>
+
+
+<!--
+TOGGLE
+-->
+<div class="dash_settings" id="settings_toggle">
+<form>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Anti-Rug"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["First Bundle or Fail"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["First Bundle Backup"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Transfer on Blacklist"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["MaxTX or Revert"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
+</form>
+</div>
+
+
+<!--
+SAFETY
+-->
+<div class="dash_settings" id="settings_safety">
+<form>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Slippage"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Min Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Max Liquidity Limit"][$_SESSION['langue']] ?></label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
+</ul>
+</form>
+</div>
 
 
 </div>
