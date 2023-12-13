@@ -54,7 +54,7 @@ SETTINGS
 <!--
 WALLET CREATE
 -->
-<div class="dash_settings" id="wallet_preference" style="display:flex;">
+<div class="dash_settings" id="wallet_preference" style="display:flexoverflow:visible;">
 <form>
 
 <div class="dash_preference">
@@ -105,18 +105,18 @@ WALLET CREATE
 WALLET CREATE
 -->
 <div class="dash_settings" id="wallet_create">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["Create Wallet"][$_SESSION['langue']] ?></div>
 <form>
-<li class="w100"><label><?= $latrad["Name your wallet"][$_SESSION['langue']] ?></label><input type="text" placeholder="Wallet 1"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>' onClick="wallet_create2(event)"></li>
+<div class="dash_settings_title">Create Your Wallet</div>
+<ul class="dash_settings_ul">
+<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_create2(event)"></div></li>
+</ul>
 </form>
 </div>
 <div class="dash_settings" id="wallet_create2">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["Successfully Created Wallet"][$_SESSION['langue']] ?></div>
 <form>
+<div class="dash_settings_title">Successfully Created Wallet</div>
 <li class="dash_settings_confirmation">
-<b><?= $latrad["Save your private key"][$_SESSION['langue']] ?></b> 
-<p><?= $latrad["If you delete this message, we will not show your private key again."][$_SESSION['langue']] ?>
+<p>Save your private key. <br><br>If you delete this message, we will not show your private key again.
 <em>0x4b8e8b3f634fba1c5ed20f03e8c5a8b305d8e3a2f1b3c4d5e6f60718293a4b5c <i class="fa-regular fa-copy"></i></em>
 </p>
 </li>
@@ -127,43 +127,44 @@ WALLET CREATE
 WALLET IMPORT
 -->
 <div class="dash_settings" id="wallet_import">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["Import Wallet"][$_SESSION['langue']] ?></div>
 <form>
-<li class="w100"><label><?= $latrad["Name your wallet"][$_SESSION['langue']] ?></label><input type="text" placeholder="Wallet 1"></li>
-<li class="w100"><input type="submit" value='<?= $latrad["Next"][$_SESSION["langue"]] ?>' onClick="wallet_import2(event)"></li>
+<div class="dash_settings_title">Import Your Wallet</div>
+<ul class="dash_settings_ul">
+<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_import2(event)"></div></li>
+</ul>
 </form>
 </div>
-<div class="dash_settings" id="wallet_import2">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["Import your private key (MetaMask)"][$_SESSION['langue']] ?></div>
+<div class="dash_settings" id="wallet_import2" style="overflow:visible">
 <form>
-<li class="w100"><label><?= $latrad["Paste your private key"][$_SESSION['langue']] ?></label><input type="text" placeholder="0X000...0000"></li>
-<li class="w100"><input type="submit"value='<?= $latrad["Save"][$_SESSION["langue"]] ?>' onClick="wallet_import3(event)"></li>
+<div class="dash_settings_title"> Import your private key</div>
+<ul class="dash_settings_ul">
+<li><label>Paste</label><div><input type="text" placeholder="0X000...0000" class="wxlarge"><input type="submit" value="Save" onClick="wallet_import3(event)"></div></li>
 <li class="w100b">
-<div class="wallet_import2_img"><?= $latrad["Step 1"][$_SESSION['langue']] ?><img src="/images/privatekey1.gif"></div>
-<div class="wallet_import2_img"><?= $latrad["Step 2"][$_SESSION['langue']] ?><img src="/images/privatekey2.gif"></div>
-<div class="wallet_import2_img"><?= $latrad["Step 3"][$_SESSION['langue']] ?><img src="/images/privatekey3.gif"></div>
+<div class="wallet_import2_img">Step 1<img src="/images/privatekey1.gif"></div>
+<div class="wallet_import2_img">Step 2<img src="/images/privatekey2.gif"></div>
+<div class="wallet_import2_img">Step 3<img src="/images/privatekey3.gif"></div>
 </li>
+</ul>
 </form>
 </div>
 <div class="dash_settings" id="wallet_import3">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["Successfully Created Wallet"][$_SESSION['langue']] ?></div>
 <form>
-<div class="dash_settings_confirmation"><?= $latrad["Done. Congrats"][$_SESSION['langue']] ?></div>
+<div class="dash_settings_title">Successfully Created Wallet</div>
+<li class="dash_settings_confirmation"><p>Done. Congrats.</p></li>
 </form>
 </div>
+
 
 <!--
 WALLET MY
 -->
 <div class="dash_settings" id="wallet_my">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad["My Wallets"][$_SESSION['langue']] ?></div>
 <form>
 <li class="dash_settings_wallets">
-<div><u><i class="fa-solid fa-pen-to-square"></i> <?= $latrad["Wallet"][$_SESSION['langue']] ?> 1: 3 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
+<div><u><i class="fa-solid fa-pen-to-square"></i> Wallet 1: 3 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
 <div>0x4b8e8b3f634e3a2f1b3c4d5e6f60718293a4b7h</div>
-<div><a class="on"><?= $latrad["Default wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Sniper wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a><a><?= $latrad["Buy, Sell wallet"][$_SESSION['langue']] ?><i class="fa-solid fa-check"></i></a></div>
+<div><a class="on">Default<i class="fa-solid fa-check"></i></a><a>Sniper<i class="fa-solid fa-check"></i></a><a>Manual<i class="fa-solid fa-check"></i></a></div>
 </li>
-<li>
 </form>
 </div>
 
@@ -422,7 +423,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_gas').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_gas').addClass('on');
-$('#settings_gas form li:nth-child(1) input[type=text]').focus();
 closeAllGas();
 $('#gas1').show();
 }
@@ -432,7 +432,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_toggle').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_toggle').addClass('on');
-$('#settings_toggle form li:nth-child(1) input[type=text]').focus();
 closeAllToggle();
 $('#toggle1').show();
 }
@@ -442,7 +441,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_safety').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_safety').addClass('on');
-$('#settings_safety form li:nth-child(1) input[type=text]').focus();
 closeAllSafety();
 $('#safety1').show();
 }
@@ -452,7 +450,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_buy').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_buy').addClass('on');
-$('#settings_buy form li:nth-child(1) input[type=text]').focus();
 closeAllBuy();
 $('#buy1').show();
 }
@@ -462,7 +459,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_sell').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_sell').addClass('on');
-$('#settings_sell form li:nth-child(1) input[type=text]').focus();
 closeAllSell();
 $('#sell1').show();
 }
@@ -472,7 +468,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_snipe').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_snipe').addClass('on');
-$('#settings_snipe form li:nth-child(1) input[type=text]').focus();
 closeAllSnipe();
 $('#snipe1').show();
 }
