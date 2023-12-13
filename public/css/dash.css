@@ -267,7 +267,7 @@ WALLET
 .dash_wallet2 {display:flex;width:100%;flex-direction:column;height:483px;}
 .dash_settings {display:none;width:100%;flex-wrap:wrap;padding:25px 0 0 0;overflow-y:auto;}
 .dash_settings form {display:flex;width:100%;flex-wrap:wrap;justify-content:space-between;}
-.dash_settings form .dash_settings_ul {display:flex;width:100%;border:1px solid var(--color-border);border-radius:5px;flex-direction:column;font-size:12px;margin-bottom:80px;}
+.dash_settings form .dash_settings_ul {display:flex;width:100%;border:1px solid var(--color-border);border-radius:5px;flex-direction:column;font-size:12px;margin-bottom:40px;}
 .dash_settings form .dash_settings_ul li {display:flex;width:100%;height:auto;padding:15px 15px 15px 15px;position:relative;align-items:center;justify-content:space-between;border-bottom:1px solid var(--color-border);}
 .dash_settings form .dash_settings_ul li label {color:var(--color-text1);line-height:1;display:flex;flex-direction:row-reverse;justify-content:flex-end;}
 .dash_settings form .dash_settings_ul li label div {position:relative;display:flex;cursor:pointer;}
@@ -279,7 +279,7 @@ WALLET
 .dash_settings form .dash_settings_ul li input[type=text].wxlarge {width:300px;}
 .dash_settings form .dash_settings_ul li input[type=text]:focus {border:1px solid var(--color-storm);}
 .dash_settings form .dash_settings_ul li:nth-last-child(1) {border:none;}
-.dash_settings form input[type=submit] {display:flex;width:50px;height:30px;border-radius:5px;padding:0;color:#fff;background:var(--color-storm);justify-content:center;align-items:center;cursor:pointer;font-size:12px;margin-left:10px;font-weight:normal;}
+.dash_settings form input[type=submit] {display:flex;width:45px;height:30px;border-radius:5px;padding:0;color:#fff;background:var(--color-storm);justify-content:center;align-items:center;cursor:pointer;font-size:12px;margin-left:8px;font-weight:normal;}
 .dash_settings form .dash_settings_ul li div {position:relative;display:flex;cursor:pointer;}
 .dash_settings form .dash_settings_ul li div.w100 {width:100%;}
 .dash_settings form .dash_settings_ul li div.w100 input[type=text] {width:100%;}
