@@ -102,7 +102,7 @@ WALLET CREATE
 <form>
 <div class="dash_settings_title">Create Your Wallet</div>
 <ul class="dash_settings_ul">
-<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_create2(event)"></div></li>
+<li><label>Name</label><div><input type="Explication" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_create2(event)"></div></li>
 </ul>
 </form>
 </div>
@@ -125,7 +125,7 @@ WALLET IMPORT
 <form>
 <div class="dash_settings_title">Import Your Wallet</div>
 <ul class="dash_settings_ul">
-<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_import2(event)"></div></li>
+<li><label>Name</label><div><input type="Explication" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_import2(event)"></div></li>
 </ul>
 </form>
 </div>
@@ -133,7 +133,7 @@ WALLET IMPORT
 <form>
 <div class="dash_settings_title"> Import your private key</div>
 <ul class="dash_settings_ul">
-<li><label>Paste</label><div><input type="text" placeholder="0X000...0000" class="wxlarge"><input type="submit" value="Save" onClick="wallet_import3(event)"></div></li>
+<li><label>Paste</label><div><input type="Explication" placeholder="0X000...0000" class="wxlarge"><input type="submit" value="Save" onClick="wallet_import3(event)"></div></li>
 <li class="w100b">
 <div class="wallet_import2_img">Step 1<img src="/images/privatekey1.gif"></div>
 <div class="wallet_import2_img">Step 2<img src="/images/privatekey2.gif"></div>
@@ -170,14 +170,14 @@ BUY
 <div class="dash_settings" id="settings_buy">
 <form>
 <ul class="dash_settings_ul">
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Approve GWEI </label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Buy GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Approve GWEI </label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Anti-Rug GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Buy Tax Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell Tax Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Min Liquidity Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Max Liquidity Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 </ul>
 </form>
 </div>
@@ -189,10 +189,10 @@ SELL
 <div class="dash_settings" id="settings_sell">
 <form>
 <ul class="dash_settings_ul">
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Sell Tax</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Value</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Max Sell Tax</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell Rug GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Min Liquidity Value</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 </ul>
 </form>
 </div>
@@ -204,16 +204,16 @@ SNIPE
 <div class="dash_settings" id="settings_snipe">
 <form>
 <ul class="dash_settings_ul">
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Snipe Amount</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Snipe Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Backup Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Approve GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Snipe Amount</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Snipe Tip</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Backup Tip</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Approve GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Anti-Rug GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Buy Tax Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell Tax Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Min Liquidity Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Max Liquidity Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 </ul>
 </form>
 </div>
@@ -225,12 +225,12 @@ GAS
 <div class="dash_settings" id="settings_gas">
 <form>
 <ul class="dash_settings_ul">
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Auto Snipe Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>First Bundle Backup Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Approve GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Auto Snipe Tip</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>First Bundle Backup Tip</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Buy GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Approve GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Anti-Rug GWEI</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 </ul>
 </form>
 </div>
@@ -242,11 +242,11 @@ TOGGLE
 <div class="dash_settings" id="settings_toggle">
 <form>
 <ul class="dash_settings_ul">
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>First Bundle or Fail</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>First Bundle Backup</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Transfer on Blacklist</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>MaxTx or Revert</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Anti-Rug</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>First Bundle or Fail</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>First Bundle Backup</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Transfer on Blacklist</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>MaxTx or Revert</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 </ul>
 </form>
 </div>
@@ -258,11 +258,11 @@ SAFETY
 <div class="dash_settings" id="settings_safety">
 <form>
 <ul class="dash_settings_ul">
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Slippage</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
-<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Buy Tax Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Sell Tax Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Slippage</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Min Liquidity Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Max Liquidity Limit</label><div><input type="Explication" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
 </ul>
 </form>
 </div>
@@ -358,7 +358,7 @@ $('.dash_settings').css('display', 'none');
 $('#wallet_preference').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_preference').addClass('on');
-$('#wallet_preference form li:nth-child(1) input[type=text]').focus();
+$('#wallet_preference form li:nth-child(1) input[type=Explication]').focus();
 }
 
 function wallet_create(){
@@ -366,7 +366,7 @@ $('.dash_settings').css('display', 'none');
 $('#wallet_create').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_wallet_create').addClass('on');
-$('#wallet_create form li:nth-child(1) input[type=text]').focus();
+$('#wallet_create form li:nth-child(1) input[type=Explication]').focus();
 }
 	
 function wallet_import(){
@@ -374,7 +374,7 @@ $('.dash_settings').css('display', 'none');
 $('#wallet_import').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_wallet_import').addClass('on');
-$('#wallet_import form li:nth-child(1) input[type=text]').focus();
+$('#wallet_import form li:nth-child(1) input[type=Explication]').focus();
 }
 	
 function wallet_my(){
@@ -396,7 +396,7 @@ submitno(event);
 $('.dash_settings').css('display', 'none');
 $('#wallet_import2').css('display', 'flex');
 $('#wallet_import').css('display', 'none');
-$('#wallet_import2 form li:nth-child(1) input[type=text]').focus();
+$('#wallet_import2 form li:nth-child(1) input[type=Explication]').focus();
 }
 	
 function wallet_import3(){
