@@ -47,8 +47,9 @@ SETTINGS
 <!--
 WALLET CREATE
 -->
-<div class="dash_settings" id="wallet_preference" style="display:flex;overflow:visible;">
+<div class="dash_settings" id="wallet_preference" style="overflow:visible;">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Preference</div>
 <div class="dash_preference">
 <div>
 <b>Theme</b>
@@ -92,15 +93,15 @@ WALLET CREATE
 -->
 <div class="dash_settings" id="wallet_create">
 <form>
-<div class="dash_settings_title">Create Your Wallet</div>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Create Wallet</div>
 <ul class="dash_settings_ul">
-<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_create2(event)"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_create2(event)"></div></li>
 </ul>
 </form>
 </div>
 <div class="dash_settings" id="wallet_create2">
 <form>
-<div class="dash_settings_title">Successfully Created Wallet</div>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Successfully Created Wallet</div>
 <li class="dash_settings_confirmation">
 <p>Save your private key. <br><br>If you delete this message, we will not show your private key again.
 <em>0x4b8e8b3f634fba1c5ed20f03e8c5a8b305d8e3a2f1b3c4d5e6f60718293a4b5c <i class="fa-regular fa-copy"></i></em>
@@ -115,17 +116,17 @@ WALLET IMPORT
 -->
 <div class="dash_settings" id="wallet_import">
 <form>
-<div class="dash_settings_title">Import Your Wallet</div>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Import Wallet</div>
 <ul class="dash_settings_ul">
-<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_import2(event)"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_import2(event)"></div></li>
 </ul>
 </form>
 </div>
 <div class="dash_settings" id="wallet_import2" style="overflow:visible">
 <form>
-<div class="dash_settings_title"> Import your private key</div>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Import your private key (MetaMask)</div>
 <ul class="dash_settings_ul">
-<li><label>Paste</label><div><input type="text" placeholder="0X000...0000" class="wxlarge"><input type="submit" value="Save" onClick="wallet_import3(event)"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Explication</span></div>Paste</label><div><input type="text" placeholder="0X000...0000" class="wxlarge"><input type="submit" value="Save" onClick="wallet_import3(event)"></div></li>
 <li class="w100b">
 <div class="wallet_import2_img">Step 1<img src="/images/privatekey1.gif"></div>
 <div class="wallet_import2_img">Step 2<img src="/images/privatekey2.gif"></div>
@@ -136,7 +137,7 @@ WALLET IMPORT
 </div>
 <div class="dash_settings" id="wallet_import3">
 <form>
-<div class="dash_settings_title">Successfully Created Wallet</div>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Successfully Created Wallet</div>
 <li class="dash_settings_confirmation"><p>Done. Congrats.</p></li>
 </form>
 </div>
@@ -147,6 +148,7 @@ WALLET MY
 -->
 <div class="dash_settings" id="wallet_my">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> My Wallets</div>
 <li class="dash_settings_wallets">
 <div><u><i class="fa-solid fa-pen-to-square"></i> Wallet 1: 3 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
 <div>0x4b8e8b3f634e3a2f1b3c4d5e6f60718293a4b7h</div>
@@ -307,6 +309,7 @@ $('#wallet_preference').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_preference').addClass('on');
 $('#wallet_preference form li:nth-child(1) input[type=text]').focus();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 }
 
 function wallet_create(){
@@ -315,6 +318,7 @@ $('#wallet_create').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_wallet_create').addClass('on');
 $('#wallet_create form li:nth-child(1) input[type=text]').focus();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 }
 	
 function wallet_import(){
@@ -323,6 +327,7 @@ $('#wallet_import').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_wallet_import').addClass('on');
 $('#wallet_import form li:nth-child(1) input[type=text]').focus();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 }
 	
 function wallet_my(){
@@ -330,6 +335,7 @@ $('.dash_settings').css('display', 'none');
 $('#wallet_my').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_wallet_my').addClass('on');
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 }
 
 function wallet_create2(){
@@ -337,6 +343,7 @@ submitno(event);
 $('.dash_settings').css('display', 'none');
 $('#wallet_create2').css('display', 'flex');
 $('#wallet_create').css('display', 'none');
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 }
 	
 function wallet_import2(){
@@ -345,6 +352,7 @@ $('.dash_settings').css('display', 'none');
 $('#wallet_import2').css('display', 'flex');
 $('#wallet_import').css('display', 'none');
 $('#wallet_import2 form li:nth-child(1) input[type=text]').focus();
+if (window.matchMedia("(max-width: 700px)").matches) {$('#dash_wallet1').css('display', 'none');}
 }
 	
 function wallet_import3(){

@@ -269,7 +269,7 @@ SETTINGS
 .dash_settings form {display:flex;width:100%;flex-wrap:wrap;justify-content:space-between;}
 .dash_settings form .dash_settings_ul {display:flex;width:100%;border:1px solid var(--color-border);border-radius:5px;flex-direction:column;font-size:12px;margin-bottom:40px;}
 .dash_settings form .dash_settings_ul li {display:flex;width:100%;height:auto;padding:15px 15px 15px 15px;position:relative;align-items:center;justify-content:space-between;border-bottom:1px solid var(--color-border);}
-.dash_settings form .dash_settings_ul li label {color:var(--color-text1);line-height:1;display:flex;flex-direction:row-reverse;justify-content:flex-end;}
+.dash_settings form .dash_settings_ul li label {color:var(--color-text1);line-height:1;display:flex;flex-direction:row-reverse;justify-content:flex-end;z-index:100;}
 .dash_settings form .dash_settings_ul li label div {position:relative;display:flex;cursor:pointer;}
 .dash_settings form .dash_settings_ul li label div i {margin-left:7px;color:var(--color-text2);}
 .dash_settings form .dash_settings_ul li label div span {position:absolute;top:-5px;left:30px;border-radius:10px;padding:20px;background:var(--color-bloc2);display:none;}
@@ -301,7 +301,7 @@ SETTINGS
 .dash_settings form .dash_preference div u a {color:#fff;}
 .dash_settings form .dash_preference div:nth-last-child(1) {border:none;}
 .dash_settings form .dash_settings_title {display:flex;font-size:14px;margin-bottom:10px;font-weight:600;align-items:center;}
-.dash_settings form .dash_settings_title i {margin-right:10px;}
+.dash_settings form .dash_settings_title i {margin-right:10px;display:none;}
 .dash_settings form li.dash_settings_confirmation {display:block;width:100%;font-size:12px;}
 .dash_settings form li.dash_settings_confirmation b {font-weight:500;font-size:14px;}
 .dash_settings form li.dash_settings_confirmation p {display:block;margin-top:15px;}
@@ -321,6 +321,8 @@ SETTINGS
 .dash_settings form li.dash_settings_wallets div:nth-child(3) a.on i {display:flex;margin-left:5px;}
 .dash_settings form li.dash_settings_wallets div:nth-child(3) a:nth-last-child(1) {margin-right:0;}
 .dash_settings form li.w100b {width:100%;flex-direction:row;justify-content:space-between;padding-bottom:25px;}
+#wallet_preference {display:flex;}
+
 
 /*
 SEARCH

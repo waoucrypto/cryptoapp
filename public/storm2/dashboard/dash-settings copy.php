@@ -57,6 +57,7 @@ WALLET CREATE
 -->
 <div class="dash_settings" id="wallet_preference" style="display:flex;">
 <form>
+<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Create Wallet</div>
 
 <div class="dash_preference">
 
