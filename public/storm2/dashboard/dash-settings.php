@@ -55,11 +55,9 @@ SETTINGS
 <!--
 WALLET CREATE
 -->
-<div class="dash_settings" id="wallet_preference" style="display:flex;">
+<div class="dash_settings" id="wallet_preference" style="display:flex;overflow:visible;">
 <form>
-
 <div class="dash_preference">
-
 <div>
 <b>Theme</b>
 <b><span onClick="dash_preference_theme()">Dark <i class="fa-solid fa-angle-down"></i></span>
@@ -68,9 +66,7 @@ WALLET CREATE
 <li><a>Light</a></li>
 </ul>
 </b>
-
 </div>
-	
 <div>
 <b>Locale</b>
 <b><span onClick="dash_preference_locale()">en-EN <i class="fa-solid fa-angle-down"></i></span>
@@ -90,14 +86,11 @@ WALLET CREATE
 </ul>
 </b>
 </div>
-	
 <div>
 <b>Wallets</b>
 <u><a onClick="wallet_create()">Create Wallet</a></u>
 </div>
-
 </div>
-
 </form>
 </div>
 
@@ -106,58 +99,61 @@ WALLET CREATE
 WALLET CREATE
 -->
 <div class="dash_settings" id="wallet_create">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Create Wallet</div>
 <form>
-<li class="w100"><label>Name your wallet</label><input type="text" placeholder="Wallet 1"></li>
-<li class="w100"><input type="submit" value="Save" onClick="wallet_create2(event)"></li>
+<div class="dash_settings_title">Create Your Wallet</div>
+<ul class="dash_settings_ul">
+<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_create2(event)"></div></li>
+</ul>
 </form>
 </div>
 <div class="dash_settings" id="wallet_create2">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Successfully Created Wallet</div>
 <form>
+<div class="dash_settings_title">Successfully Created Wallet</div>
 <li class="dash_settings_confirmation">
-<b>Save your private key</b> 
-<p>If you delete this message, we will not show your private key again.
+<p>Save your private key. <br><br>If you delete this message, we will not show your private key again.
 <em>0x4b8e8b3f634fba1c5ed20f03e8c5a8b305d8e3a2f1b3c4d5e6f60718293a4b5c <i class="fa-regular fa-copy"></i></em>
 </p>
 </li>
 </form>
 </div>
 
+
 <!--
 WALLET IMPORT
 -->
 <div class="dash_settings" id="wallet_import">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Import Wallet</div>
 <form>
-<li class="w100"><label>Name your wallet</label><input type="text" placeholder="Wallet 1"></li>
-<li class="w100"><input type="submit" value="Next" onClick="wallet_import2(event)"></li>
+<div class="dash_settings_title">Import Your Wallet</div>
+<ul class="dash_settings_ul">
+<li><label>Name</label><div><input type="text" placeholder="Wallet 1" class="wlarge"><input type="submit" value="Save" onClick="wallet_import2(event)"></div></li>
+</ul>
 </form>
 </div>
-<div class="dash_settings" id="wallet_import2">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Import your private key (MetaMask)</div>
+<div class="dash_settings" id="wallet_import2" style="overflow:visible">
 <form>
-<li class="w100"><label>Paste your private key</label><input type="text" placeholder="0X000...0000"></li>
-<li class="w100"><input type="submit" value="Save" onClick="wallet_import3(event)"></li>
+<div class="dash_settings_title"> Import your private key</div>
+<ul class="dash_settings_ul">
+<li><label>Paste</label><div><input type="text" placeholder="0X000...0000" class="wxlarge"><input type="submit" value="Save" onClick="wallet_import3(event)"></div></li>
 <li class="w100b">
 <div class="wallet_import2_img">Step 1<img src="/images/privatekey1.gif"></div>
 <div class="wallet_import2_img">Step 2<img src="/images/privatekey2.gif"></div>
 <div class="wallet_import2_img">Step 3<img src="/images/privatekey3.gif"></div>
 </li>
+</ul>
 </form>
 </div>
 <div class="dash_settings" id="wallet_import3">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Successfully Created Wallet</div>
 <form>
-<div class="dash_settings_confirmation">Done. Congrats</div>
+<div class="dash_settings_title">Successfully Created Wallet</div>
+<li class="dash_settings_confirmation"><p>Done. Congrats.</p></li>
 </form>
 </div>
+
 
 <!--
 WALLET MY
 -->
 <div class="dash_settings" id="wallet_my">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> My Wallets</div>
 <form>
 <li class="dash_settings_wallets">
 <div><u><i class="fa-solid fa-pen-to-square"></i> Wallet 1: 3 ETH</u><u><i class="fa-regular fa-circle-xmark"></i></u></div>
@@ -167,59 +163,22 @@ WALLET MY
 </form>
 </div>
 
+
 <!--
 BUY
 -->
 <div class="dash_settings" id="settings_buy">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Buy Settings</div>
 <form>
-<li><label>Buy GWEI</label><input type="text" placeholder="0.01 ETH" onClick="buy1()"></li>
-<li><label>Approve GWEI</label><input type="text" placeholder="0.01 ETH" onClick="buy2()"></li>
-<li><label>Sell GWEI</label><input type="text" placeholder="0.01 ETH" onClick="buy3()"></li>
-<li><label>Anti-Rug GWEI</label><input type="text" placeholder="0.01 ETH" onClick="buy4()"></li>
-<li><label>Buy Tax Limit</label><input type="text" placeholder="0.01 ETH" onClick="buy5()"></li>
-<li><label>Sell Tax Limit</label><input type="text" placeholder="0.01 ETH" onClick="buy6()"></li>
-<li><label>Min Liquidity Limit</label><input type="text" placeholder="0.01 ETH" onClick="buy7()"></li>
-<li><label>Max Liquidity Limit</label><input type="text" placeholder="0.01 ETH" onClick="buy8()"></li>
-<li class="w100"><input type="submit" value="Save"></li>
-<li>
-<span id="buy1">
-<b>Buy GWEI</b>
-<p>Set the additional GWEI you're willing to use for buying the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy2">
-<b>Approve GWEI</b>
-<p>Determine the extra GWEI you're willing to use to expedite token approval following your purchase. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy3">
-<b>Sell GWEI</b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy4">
-<b>Anti-Rug GWEI</b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="buy5">
-<b>Buy Tax Limit</b>
-<p>The Snipe only triggers if the buy tax of the selected token is at or lower than the set limit. Example: Your buy tax limit is set at 80%. If XYZ token launches with a 99 buy tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the buy tax to 75%, Storm will fire in the same block as the tax change.
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire</p>
-</span>
-<span id="buy6">
-<b>Sell Tax Limit</b>
-<p>The Snipe only triggers if the sell tax of the selected token is at or lower than the set limit. Example: Your sell tax limit is set at 80%. If XYZ token launches with a 99 sell tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the sell tax to 75%, Storm will fire in the same block as the tax change. 
-<br><br>Note:
-<br>-Both buy tax and sell tax limits must be met for Storm to fire.</p>
-</span>
-<span id="buy7">
-<b>Min Liquidity Limit</b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or higher than the amount set by the user. The limit is based on USD value.</p>
-</span>
-<span id="buy8">
-<b>Max Liquidity Limit</b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or lower than the amount set by the user. The limit is based on USD value.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Approve GWEI </label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+</ul>
 </form>
 </div>
 
@@ -228,31 +187,13 @@ BUY
 SELL
 -->
 <div class="dash_settings" id="settings_sell">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Sell Settings</div>
 <form>
-<li><label>Max Sell Tax</label><input type="text" placeholder="0.01 ETH" onClick="sell1()"></li>
-<li><label>Sell GWEI</label><input type="text" placeholder="0.01 ETH" onClick="sell2()"></li>
-<li><label>Sell Rug GWEI</label><input type="text" placeholder="0.01 ETH" onClick="sell3()"></li>
-<li><label>Min Liquidity Value</label><input type="text" placeholder="0.01 ETH" onClick="sell4()"></li>
-<li class="w100"><input type="submit" value="Save"></li>
-<li>
-<span id="sell1">
-<b>Max Sell Tax</b>
-<p>If developer changes the sell tax above your set limit, Storm will try and frontrun the tax change transaction.</p>
-</span>
-<span id="sell2">
-<b>Sell GWEI</b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="sell3">
-<b>Sell Rug GWEI</b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="sell4">
-<b>Min Liquidity Value</b>
-<p>If the paired liquidity falls to or lower than the amount the user set up, Storm will initiate a sell. The limit is based on USD value.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Sell Tax</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Value</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+</ul>
 </form>
 </div>
 
@@ -261,71 +202,19 @@ SELL
 SNIPE
 -->
 <div class="dash_settings" id="settings_snipe">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Snipe Settings</div>
 <form>
-<li><label>Snipe Amount</label><input type="text" placeholder="0.01 ETH" onClick="snipe1()"></li>
-<li><label>Snipe Tip</label><input type="text" placeholder="0.01 ETH" onClick="snipe2()"></li>
-<li><label>Backup Tip</label><input type="text" placeholder="0.01 ETH" onClick="snipe3()"></li>
-<li><label>Approve GWEI</label><input type="text" placeholder="0.01 ETH" onClick="snipe4()"></li>
-<li><label>Sell GWEI</label><input type="text" placeholder="0.01 ETH" onClick="snipe5()"></li>
-<li><label>Anti-Rug GWEI</label><input type="text" placeholder="0.01 ETH" onClick="snipe6()"></li>
-<li><label>Buy Tax Limit</label><input type="text" placeholder="0.01 ETH" onClick="snipe7()"></li>
-<li><label>Sell Tax Limit</label><input type="text" placeholder="0.01 ETH" onClick="snipe8()"></li>
-<li><label>Min Liquidity Limit</label><input type="text" placeholder="0.01 ETH" onClick="snipe9()"></li>
-<li><label>Max Liquidity Limit</label><input type="text" placeholder="0.01 ETH" onClick="snipe10()"></li>
-<li class="w100"><input type="submit" value="Save"></li>
-<li>
-<span id="snipe1">
-<b>Snipe Amount</b>
-<p>This is the MaxSpend amount that you allow the bot to use for purchasing the MaxTransaction amount of the token. If the MaxTransaction value is lower than your MaxSpend, any remaining ETH will be returned to your wallet. If the MaxTransaction is higher than your MaxSpend, it will purchase as many tokens as possible for the MaxSpend value (unless you've set up slippage).</p>
-</span>
-<span id="snipe2">
-<b>Snipe Tip</b>
-<p>Specify the additional ETH you're willing to pay as a bribe to the block builder to get ahead of other snipers. This applies only to unlaunched tokens you plan to snipe.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="snipe3">
-<b>Backup Tip</b>
-<p>FoF does not fire on MEV launches or Deadblock launches, However, if you have Backup enabled, it will trigger using the Backup Tip in these cases, instead of the Snipe Tip.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="snipe4">
-<b>Approve GWEI</b>
-<p>Determine the extra GWEI you're willing to use to expedite token approval following your purchase. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="snipe5">
-<b>Sell GWEI</b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="snipe6">
-<b>Anti-Rug GWEI</b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="snipe7">
-<b>Buy Tax Limit</b>
-<p>The Snipe only triggers if the buy tax of the selected token is at or lower than the set limit. Example: Your buy tax limit is set at 80%. If XYZ token launches with a 99 buy tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the buy tax to 75%, Storm will fire in the same block as the tax change.
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire</p>
-</span>
-<span id="snipe8">
-<b>Sell Tax Limit</b>
-<p>The Snipe only triggers if the sell tax of the selected token is at or lower than the set limit. Example: Your sell tax limit is set at 80%. If XYZ token launches with a 99 sell tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the sell tax to 75%, Storm will fire in the same block as the tax change. 
-<br>
-<br>Note:<br>-Both buy tax and sell tax limits must be met for Storm to fire.</p>
-</span>
-<span id="snipe9">
-<b>Min Liquidity Limit</b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or higher than the amount set by the user. The limit is based on USD value.</p>
-</span>
-<span id="snipe10">
-<b>Max Liquidity Limit</b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or lower than the amount set by the user. The limit is based on USD value.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Snipe Amount</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Snipe Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Backup Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Approve GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+</ul>
 </form>
 </div>
 
@@ -334,47 +223,15 @@ SNIPE
 GAS
 -->
 <div class="dash_settings" id="settings_gas">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Gas Settings</div>
 <form>
-<li><label>Auto Snipe Tip</label><input type="text" placeholder="0.01 ETH" onClick="gas1()"></li>
-<li><label>First Bundle Backup Tip</label><input type="text" placeholder="0.01 ETH" onClick="gas2()"></li>
-<li><label>Buy GWEI</label><input type="text" placeholder="0.01 ETH" onClick="gas3()"></li>
-<li><label>Approve GWEI</label><input type="text" placeholder="0.01 ETH" onClick="gas4()"></li>
-<li><label>Sell GWEI</label><input type="text" placeholder="0.01 ETH" onClick="gas5()"></li>
-<li><label>Anti-Rug GWEI</label><input type="text" placeholder="0.01 ETH" onClick="gas6()"></li>
-<li class="w100"><input type="submit" value="Save"></li>
-<li>
-<span id="gas1">
-<b>Auto Snipe Tip</b>
-<p>Specify the additional ETH you're willing to pay as a bribe to the block builder to get ahead of other snipers. This applies only to unlaunched tokens you plan to snipe.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="gas2">
-<b>First Bundle Backup Tip</b>
-<p>FoF does not fire on MEV launches or Deadblock launches, However, if you have Backup enabled, it will trigger using the Backup Tip in these cases, instead of the Snipe Tip.
-<br><br>Note: 
-<br>- Storm bot uses ETH as a bribe and not GWEI.
-<br>- In case your snipe fails, you will never lose your Tip amount.</p>
-</span>
-<span id="gas3">
-<b>Buy GWEI</b>
-<p>Set the additional GWEI you're willing to use for buying the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="gas4">
-<b>Approve GWEI</b>
-<p>Determine the extra GWEI you're willing to use to expedite token approval following your purchase. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="gas5">
-<b>Sell GWEI</b>
-<p>Set the additional GWEI you're willing to use for selling the desired token. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-<span id="gas6">
-<b>Anti-Rug GWEI</b>
-<p>Specify the extra GWEI you're willing to use for selling the desired token when front-running a rug or tax change. More GWEI secures earlier positions in the block. This is additional GWEI above the base GWEI of the block.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Auto Snipe Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>First Bundle Backup Tip</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Approve GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug GWEI</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+</ul>
 </form>
 </div>
 
@@ -383,51 +240,14 @@ GAS
 TOGGLE
 -->
 <div class="dash_settings" id="settings_toggle">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Toggle Settings</div>
 <form>
-<li class="w100"><label>Anti-Rug</label><input type="text" placeholder="0.01 ETH" onClick="toggle1()"></li>
-<li><label>First Bundle or Fail</label><input type="text" placeholder="0.01 ETH" onClick="toggle2()"></li>
-<li><label>First Bundle Backup</label><input type="text" placeholder="0.01 ETH" onClick="toggle3()"></li>
-<li><label>Transfer on Blacklist</label><input type="text" placeholder="0.01 ETH" onClick="toggle4()"></li>
-<li><label>MaxTx or Revert</label><input type="text" placeholder="0.01 ETH" onClick="toggle5()"></li>
-<li class="w100"><input type="submit" value="Save"></li>
-<li>
-<span id="toggle1">
-<b>Anti-Rug</b>
-<p>If it's green, it's toggled on. If you wish to snipe without anti-rug, you can turn it off. If the tax goes above your safety tax settings or the developer tries to rug the token (any instance that makes investors unable to sell), Storm will attempt to frontrun the transaction and sell your tokens.
-<br><br>Note:
-<br>- Developers often "shake out" bot users with fake tax settings. If you have anti-rug on, it will trigger.
-<br>- It has an 80-85% success rate, and can only land on MEV blocks.</p>
-</span>
-<span id="toggle2">
-<b>First Bundle or Fail</b>
-<p>If its green, it is toggled on. If you wish to snipe without First Bundle or Fail on, you can turn it off. When enabled, Storm will always aim for the first buy when trading begins. It can only land on block 0 as the first bundle. It is recommended to have at least 10 participating wallets for this to work effectively.
-<br><br>Note: 
-<br>- The more wallets participate in the First Bundle or Fail, the higher the chance of winning the first buy!
-<br>- This feature does not work on MEV launches and Deadblock launches.</p>
-</span>
-<span id="toggle3">
-<b>First Bundle Backup</b>
-<p>If it's green, it's toggled on. If you wish to snipe without First Bundle or Fail Backup, you can turn it off. FoF does not trigger on MEV launches or Deadblock launches, but if you have Backup enabled, it will trigger. On MEV launches, it will buy on block 1, and on Deadblock launches, it will buy on the first safe block. In this case, it will use your Backup Miner Tip.
-<br><br>Note:
-<br>- It will use the FoF Backup Miner Tip, not the Auto Sniper Miner Tip!</p>
-</span>
-<span id="toggle4">
-<b>Transfer on Blacklist</b>
-<p>If its green, it is toggled on. If you wish to snipe without Transfer on Blacklist on, you can turn it off. If the developer tries to blacklist your wallet, Storm will call the Transfer on Blacklist function to send your tokens to the 'transfer wallet' as long as it is enabled.
-<br><br>Note:
-<br>- You must have transfer wallets set up in Storm for it to work.
-<br>- Your transfer wallets must have at least 0.1 ETH for it to work.</p>
-</span>
-<span id="toggle5">
-<b>MaxTx or Revert</b>
-<p>If you have this feature enabled, you can limit your risk tolerance and only allow the bot to buy if the maximum transaction does not exceed your MaxSpend amount. If a token does not have a maximum transaction set up, this feature is ignored.
-Example: The MaxTx of the token is 2%, and you set your maximum spend at 0.1 ETH. If 2% is worth more than 0.1 ETH at the time of your buy, then your transaction will revert.
-<br><br>Note:
-<br>- If you revert due to this setting, it will cost you the base GWEI, but you will not lose your tip.
-<br>- Tax applies post-execution.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Anti-Rug</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>First Bundle or Fail</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>First Bundle Backup</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Transfer on Blacklist</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>MaxTx or Revert</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+</ul>
 </form>
 </div>
 
@@ -436,44 +256,17 @@ Example: The MaxTx of the token is 2%, and you set your maximum spend at 0.1 ETH
 SAFETY
 -->
 <div class="dash_settings" id="settings_safety">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> Safety Settings</div>
 <form>
-<li><label>Buy Tax Limit</label><input type="text" placeholder="0.01 ETH" onClick="safety1()"></li>
-<li><label>Sell Tax Limit</label><input type="text" placeholder="0.01 ETH" onClick="safety2()"></li>
-<li class="w100"><label>Slippage</label><input type="text" placeholder="0.01 ETH" onClick="safety3()"></li>
-<li><label>Min Liquidity Limit</label><input type="text" placeholder="0.01 ETH" onClick="safety4()"></li>
-<li><label>Max Liquidity Limit</label><input type="text" placeholder="0.01 ETH" onClick="safety5()"></li>
-<li class="w100"><input type="submit" value="Save"></li>
-<li>
-<span id="safety1">
-<b>Buy Tax Limit</b>
-<p>The Snipe only triggers if the buy tax of the selected token is at or lower than the set limit. Example: Your buy tax limit is set at 80%. If XYZ token launches with a 99 buy tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the buy tax to 75%, Storm will fire in the same block as the tax change.
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire</p>
-</span>
-<span id="safety2">
-<b>Sell Tax Limit</b>
-<p>The Snipe only triggers if the sell tax of the selected token is at or lower than the set limit. Example: Your sell tax limit is set at 80%. If XYZ token launches with a 99 sell tax, Storm will not fire, and the snipe stays in "pending mode." If the developer lowers the sell tax to 75%, Storm will fire in the same block as the tax change. 
-<br><br>Note:
-<br>- Both buy tax and sell tax limits must be met for Storm to fire.</p>
-</span>
-<span id="safety3">
-<b>Slippage</b>
-<p>Normal 0-99% range. It will allow that much movement in the price or the sell times out. It is important to consider the size of your trade, the volatility of the market, and the depth of the liquidity pool. Make sure to also set a slippage tolerance that is appropriate for your risk tolerance.
-<br><br>Note:
-<br>- If you set it to 100, it will be considered "unlimited".</p>
-</span>
-<span id="safety4">
-<b>Min Liquidity Limit</b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or higher than the amount set by the user. The limit is based on USD value.</p>
-</span>
-<span id="safety5">
-<b>Max Liquidity Limit</b>
-<p>The Snipe only triggers if the paired liquidity of the token is equal to or lower than the amount set by the user. The limit is based on USD value.</p>
-</span>
-</li>
+<ul class="dash_settings_ul">
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Buy Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Sell Tax Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Slippage</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Min Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+<li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div>Max Liquidity Limit</label><div><input type="text" placeholder="0.01 ETH"><input type="submit" value="Save"></div></li>
+</ul>
 </form>
 </div>
+
 
 </div>
 </div>
@@ -623,7 +416,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_gas').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_gas').addClass('on');
-$('#settings_gas form li:nth-child(1) input[type=text]').focus();
 closeAllGas();
 $('#gas1').show();
 }
@@ -633,7 +425,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_toggle').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_toggle').addClass('on');
-$('#settings_toggle form li:nth-child(1) input[type=text]').focus();
 closeAllToggle();
 $('#toggle1').show();
 }
@@ -643,7 +434,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_safety').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_safety').addClass('on');
-$('#settings_safety form li:nth-child(1) input[type=text]').focus();
 closeAllSafety();
 $('#safety1').show();
 }
@@ -653,7 +443,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_buy').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_buy').addClass('on');
-$('#settings_buy form li:nth-child(1) input[type=text]').focus();
 closeAllBuy();
 $('#buy1').show();
 }
@@ -663,7 +452,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_sell').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_sell').addClass('on');
-$('#settings_sell form li:nth-child(1) input[type=text]').focus();
 closeAllSell();
 $('#sell1').show();
 }
@@ -673,7 +461,6 @@ $('.dash_settings').css('display', 'none');
 $('#settings_snipe').css('display', 'flex');
 $('.dash_wallet1 li').removeClass('on');
 $('#settings_menu_settings_snipe').addClass('on');
-$('#settings_snipe form li:nth-child(1) input[type=text]').focus();
 closeAllSnipe();
 $('#snipe1').show();
 }
