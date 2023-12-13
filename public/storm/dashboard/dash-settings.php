@@ -457,7 +457,6 @@ Example: The MaxTx of the token is 2%, and you set your maximum spend at 0.1 ETH
 SAFETY
 -->
 <div class="dash_settings" id="settings_safety">
-<div class="dash_settings_title"><i class="fa-solid fa-arrow-left" onClick="dash_settings_close()"></i> <?= $latrad[""][$_SESSION['langue']] ?>Safety Settings</div>
 <form>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Buy Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
 <li><label><div><i class="fa-solid fa-circle-info"></i><span>Text</span></div><?= $latrad["Sell Tax Limit"][$_SESSION['langue']] ?></label><input type="text" placeholder="0.01 ETH"><input type="submit" value='<?= $latrad["Save"][$_SESSION["langue"]] ?>'></div></li>
