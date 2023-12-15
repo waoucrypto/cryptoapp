@@ -341,7 +341,6 @@ body {background:var(--color-bloc);}
 
 .dash_wallet2 {padding-left:0;}
 .dash_settings form .dash_settings_title i {display:flex;}
-
 .dash_wallet2 {height:auto;}
 .settings_bloc .settings_bloc_title {display:none;}
 .settings_bloc {border:none;}
@@ -351,13 +350,15 @@ body {background:var(--color-bloc);}
 #wallet_preference {display:none;}
 .dash_wallet1 ul li.on {background:none;}
 .dash_wallet1 {background:none;}
-.dash_wallet1 ul li {border-bottom:1px solid var(--color-border);border-radius:0;border-left:1px solid var(--color-border);border-right:1px solid var(--color-border);height:60px;padding-left:0;}
+.dash_wallet1 ul li {border-bottom:1px solid var(--color-border);border-radius:0;border-left:1px solid var(--color-border);border-right:1px solid var(--color-border);height:46px;padding-left:0;}
 .dash_wallet1 ul li a {height:100%;}
 .dash_wallet1 ul li i {margin:0 10px 0 10px;}
 .dash_wallet1 ul li:nth-last-child(1) {border-bottom-left-radius:5px;border-bottom-right-radius:5px;}
 .dash_wallet1 ul li:nth-child(2) {border-top-left-radius:5px;border-top-right-radius:5px;border-top:1px solid var(--color-border);}
-.dash_wallet1 ul li:nth-child(1) {border:none;}
-.dash_wallet1 ul li b {padding:0 0 0 0;}
+.dash_wallet1 ul li:nth-child(1) {border:none;height:30px;}
+.dash_settings form .dash_settings_title {margin-top:-20px;}
+.dash_wallet1 ul li b {padding:0 0 0 0;font-size:14px;font-weight:600;text-transform:none;color:var(--color-text);}
+.dash_wallet1 ul li:nth-child(1) {margin:10px 0 5px 0;}
 
 }
 
